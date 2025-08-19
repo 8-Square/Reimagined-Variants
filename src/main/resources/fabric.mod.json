@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "polished_variants",
+  "version": "${version}",
+  "name": "Polished Variants",
+  "description": "Adds wooden and stone variants for tools ",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/polished_variants/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.foursquare.polished_variants.client.Polished_variantsDataGenerator"
+    ],
+    "client": [
+      "me.foursquare.polished_variants.client.Polished_variantsClient"
+    ],
+    "main": [
+      "me.foursquare.polished_variants.Polished_variants"
+    ]
+  },
+  "mixins": [
+    "polished_variants.mixins.json",
+    {
+      "config": "polished_variants.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

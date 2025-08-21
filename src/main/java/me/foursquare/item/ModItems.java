@@ -25,6 +25,8 @@ public class ModItems {
 
         return item;
     }
+
+    // CHERRY WEAPONS
     public static final Item CHERRY_SWORD = register(
             "cherry_sword",
             Item::new,
@@ -74,12 +76,16 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.re-variant.wooden_variants"))
             .build();
 
+
     public static void initialize() {
         Registry.register(Registries.ITEM_GROUP, WOODEN_VARIANTS_KEY, WOODEN_VARIANTS);
 
         ItemGroupEvents.modifyEntriesEvent(WOODEN_VARIANTS_KEY).register(itemGroup -> {
             itemGroup.add(ModItems.CHERRY_SWORD);
             itemGroup.add(ModItems.CHERRY_PICKAXE);
+            itemGroup.add(ModItems.CHERRY_AXE);
+            itemGroup.add(ModItems.CHERRY_HOE);
+            itemGroup.add(ModItems.CHERRY_SHOVEL);
         });
     }
 }

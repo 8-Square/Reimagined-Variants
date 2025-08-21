@@ -64,15 +64,24 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(
                     ToolMaterial.WOOD,
+                    3.0f,
+                    -2.4f
+            ));
+
+    // MANGROVE TOOLS
+    public static final Item MANGROVE_SWORD = register(
+            "mangrove_sword",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
                     1.5f,
                     -3.0f
             ));
-
     public static final RegistryKey<ItemGroup> WOODEN_VARIANTS_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(),
             Identifier.of(ReimaginedVariants.MOD_ID, "item_group"));
     public static final ItemGroup WOODEN_VARIANTS = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModItems.CHERRY_SWORD))
+            .icon(() -> new ItemStack(ModItems.CHERRY_PICKAXE))
             .displayName(Text.translatable("itemGroup.re-variant.wooden_variants"))
             .build();
 
@@ -84,8 +93,9 @@ public class ModItems {
             itemGroup.add(ModItems.CHERRY_SWORD);
             itemGroup.add(ModItems.CHERRY_PICKAXE);
             itemGroup.add(ModItems.CHERRY_AXE);
-            itemGroup.add(ModItems.CHERRY_HOE);
             itemGroup.add(ModItems.CHERRY_SHOVEL);
+            itemGroup.add(ModItems.CHERRY_HOE);
+            itemGroup.add(ModItems.MANGROVE_SWORD);
         });
     }
 }

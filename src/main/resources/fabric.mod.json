@@ -3,15 +3,15 @@
 	"id": "re-variant",
 	"version": "${version}",
 	"name": "Reimagined Variants",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod adds more Variants to Wooden & Stone tools",
 	"authors": [
-		"Me!"
+		"4_Square"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/8-Square/Reimagined-Variants"
 	},
-	"license": "CC0-1.0",
+	"license": "ARR",
 	"icon": "assets/re-variant/icon.png",
 	"environment": "*",
 	"entrypoints": {

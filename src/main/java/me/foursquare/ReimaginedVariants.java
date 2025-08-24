@@ -1,5 +1,6 @@
 package me.foursquare;
 
+import me.foursquare.buff.CherryGroveBuffs;
 import me.foursquare.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -15,7 +16,7 @@ public class    ReimaginedVariants implements ModInitializer {
 	public void onInitialize() {
 
         ModItems.initialize();
-
+        CherryGroveBuffs.initialize();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

@@ -72,6 +72,38 @@ public class ModItems {
     public static final Item MANGROVE_SWORD = register(
             "mangrove_sword",
             Item::new,
+            new Item.Settings().sword(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item MANGROVE_PICKAXE = register(
+            "mangrove_sword",
+            Item::new,
+            new Item.Settings().pickaxe(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item MANGROVE_AXE = register(
+            "mangrove_sword",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item MANGROVE_SHOVEL = register(
+            "mangrove_sword",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item MANGROVE_HOE = register(
+            "mangrove_sword",
+            Item::new,
             new Item.Settings().shovel(
                     ToolMaterial.WOOD,
                     1.5f,

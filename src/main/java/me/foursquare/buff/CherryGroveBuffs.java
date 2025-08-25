@@ -1,5 +1,6 @@
 package me.foursquare.buff;
 
+import me.foursquare.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -15,10 +16,12 @@ public class CherryGroveBuffs {
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
         boolean InsideCherry = biome.matchesKey(BiomeKeys.CHERRY_GROVE);
+        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.CHERRY_TOOLS);
 
-        if (InsideCherry) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 201, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 201, 0));
+
+        if (InsideCherry && HasTagItem) {
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 219, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 219, 0));
         }
         }
 

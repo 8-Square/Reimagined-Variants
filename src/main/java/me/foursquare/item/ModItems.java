@@ -78,7 +78,7 @@ public class ModItems {
                     -3.0f
             ));
     public static final Item MANGROVE_PICKAXE = register(
-            "mangrove_sword",
+            "mangrove_pickaxe",
             Item::new,
             new Item.Settings().pickaxe(
                     ToolMaterial.WOOD,
@@ -86,15 +86,15 @@ public class ModItems {
                     -3.0f
             ));
     public static final Item MANGROVE_AXE = register(
-            "mangrove_sword",
+            "mangrove_axe",
             Item::new,
-            new Item.Settings().shovel(
+            new Item.Settings().axe(
                     ToolMaterial.WOOD,
                     1.5f,
                     -3.0f
             ));
     public static final Item MANGROVE_SHOVEL = register(
-            "mangrove_sword",
+            "mangrove_shovel",
             Item::new,
             new Item.Settings().shovel(
                     ToolMaterial.WOOD,
@@ -102,7 +102,91 @@ public class ModItems {
                     -3.0f
             ));
     public static final Item MANGROVE_HOE = register(
-            "mangrove_sword",
+            "mangrove_hoe",
+            Item::new,
+            new Item.Settings().hoe(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+
+    // BIRCH TOOLS
+    public static final Item BIRCH_SWORD = register(
+            "birch_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item BIRCH_PICKAXE = register(
+            "birch_pickaxe",
+            Item::new,
+            new Item.Settings().pickaxe(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item BIRCH_AXE = register(
+            "birch_axe",
+            Item::new,
+            new Item.Settings().axe(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item BIRCH_SHOVEL = register(
+            "birch_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item BIRCH_HOE = register(
+            "birch_hoe",
+            Item::new,
+            new Item.Settings().hoe(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+
+    // ACACIA TOOLS
+    public static final Item ACACIA_SWORD = register(
+            "acacia_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item ACACIA_PICKAXE = register(
+            "acacia_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item ACACIA_AXE = register(
+            "acacia_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item ACACIA_SHOVEL = register(
+            "acacia_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item ACACIA_HOE = register(
+            "acacia_hoe",
             Item::new,
             new Item.Settings().shovel(
                     ToolMaterial.WOOD,
@@ -128,6 +212,11 @@ public class ModItems {
             itemGroup.add(ModItems.CHERRY_SHOVEL);
             itemGroup.add(ModItems.CHERRY_HOE);
             itemGroup.add(ModItems.MANGROVE_SWORD);
+            itemGroup.add(ModItems.MANGROVE_PICKAXE);
+            itemGroup.add(ModItems.MANGROVE_AXE);
+            itemGroup.add(ModItems.MANGROVE_SHOVEL);
+            itemGroup.add(ModItems.MANGROVE_HOE);
+
         });
     }
 }

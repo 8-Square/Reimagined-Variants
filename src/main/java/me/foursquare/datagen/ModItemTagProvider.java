@@ -21,6 +21,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public static final TagKey<Item> CHERRY_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "cherry_tools"));
     public static final TagKey<Item> MANGROVE_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "mangrove_tools"));
+    public static final TagKey<Item> BIRCH = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "birch_tools"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -31,7 +32,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CHERRY_SHOVEL)
                 .add(ModItems.CHERRY_HOE);
         valueLookupBuilder(ModItemTagProvider.MANGROVE_TOOLS)
-                .add(ModItems.MANGROVE_SWORD);
+                .add(ModItems.MANGROVE_SWORD)
+                .add(ModItems.MANGROVE_PICKAXE)
+                .add(ModItems.MANGROVE_AXE)
+                .add(ModItems.MANGROVE_SHOVEL)
+                .add(ModItems.MANGROVE_HOE);
     }
 
 

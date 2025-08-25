@@ -6,5 +6,10 @@
   "item.re-variant.cherry_hoe": "Cherry Hoe",
 
   "item.re-variant.mangrove_sword": "Mangrove Sword",
+  "item.re-variant.mangrove_pickaxe": "Mangrove Pickaxe",
+  "item.re-variant.mangrove_axe": "Mangrove Axe",
+  "item.re-variant.mangrove_shovel": "Mangrove Shovel",
+  "item.re-variant.mangrove_hoe": "Mangrove Hoe",
+
   "itemGroup.re-variant.wooden_variants": "Wooden Variants"
 }

@@ -193,6 +193,90 @@ public class ModItems {
                     1.5f,
                     -3.0f
             ));
+
+    // SPRUCE TOOLS ////////////////////////////////////////////////////////
+    public static final Item SPRUCE_SWORD = register(
+            "spruce_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item SPRUCE_PICKAXE = register(
+            "spruce_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item SPRUCE_AXE = register(
+            "spruce_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item SPRUCE_SHOVEL = register(
+            "spruce_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item SPRUCE_HOE = register(
+            "spruce_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+
+    // WARPED TOOLS ////////////////////////////////////////////////////////
+    public static final Item WARPED_SWORD = register(
+            "warped_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item WARPED_PICKAXE = register(
+            "warped_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item WARPED_AXE = register(
+            "warped_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item WARPED_SHOVEL = register(
+            "warped_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item WARPED_HOE = register(
+            "warped_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ToolMaterial.WOOD,
+                    1.5f,
+                    -3.0f
+            ));
     public static final RegistryKey<ItemGroup> WOODEN_VARIANTS_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(),
             Identifier.of(ReimaginedVariants.MOD_ID, "item_group"));
@@ -216,7 +300,26 @@ public class ModItems {
             itemGroup.add(ModItems.MANGROVE_AXE);
             itemGroup.add(ModItems.MANGROVE_SHOVEL);
             itemGroup.add(ModItems.MANGROVE_HOE);
-
+            itemGroup.add(ModItems.BIRCH_SWORD);
+            itemGroup.add(ModItems.BIRCH_PICKAXE);
+            itemGroup.add(ModItems.BIRCH_AXE);
+            itemGroup.add(ModItems.BIRCH_SHOVEL);
+            itemGroup.add(ModItems.BIRCH_HOE);
+            itemGroup.add(ModItems.ACACIA_SWORD);
+            itemGroup.add(ModItems.ACACIA_PICKAXE);
+            itemGroup.add(ModItems.ACACIA_AXE);
+            itemGroup.add(ModItems.ACACIA_SHOVEL);
+            itemGroup.add(ModItems.ACACIA_HOE);
+            itemGroup.add(ModItems.SPRUCE_SWORD);
+            itemGroup.add(ModItems.SPRUCE_PICKAXE);
+            itemGroup.add(ModItems.SPRUCE_AXE);
+            itemGroup.add(ModItems.SPRUCE_SHOVEL);
+            itemGroup.add(ModItems.SPRUCE_HOE);
+            itemGroup.add(ModItems.WARPED_SWORD);
+            itemGroup.add(ModItems.WARPED_PICKAXE);
+            itemGroup.add(ModItems.WARPED_AXE);
+            itemGroup.add(ModItems.WARPED_SHOVEL);
+            itemGroup.add(ModItems.WARPED_HOE);
         });
     }
 }

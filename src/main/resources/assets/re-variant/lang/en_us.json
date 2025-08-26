@@ -11,5 +11,30 @@
   "item.re-variant.mangrove_shovel": "Mangrove Shovel",
   "item.re-variant.mangrove_hoe": "Mangrove Hoe",
 
+  "item.re-variant.birch_sword": "Birch Sword",
+  "item.re-variant.birch_pickaxe": "Birch Pickaxe",
+  "item.re-variant.birch_axe": "Birch Axe",
+  "item.re-variant.birch_shovel": "Birch Shovel",
+  "item.re-variant.birch_hoe": "Birch Hoe",
+
+  "item.re-variant.acacia_sword": "Acacia Sword",
+  "item.re-variant.acacia_pickaxe": "Acacia Pickaxe",
+  "item.re-variant.acacia_axe": "Acacia Axe",
+  "item.re-variant.acacia_shovel": "Acacia Shovel",
+  "item.re-variant.acacia_hoe": "Acacia Hoe",
+
+  "item.re-variant.spruce_sword": "Spruce Sword",
+  "item.re-variant.spruce_pickaxe": "Spruce Pickaxe",
+  "item.re-variant.spruce_axe": "Spruce Axe",
+  "item.re-variant.spruce_shovel": "Spruce Shovel",
+  "item.re-variant.spruce_hoe": "Spruce Hoe",
+
+  "item.re-variant.warped_sword": "Warped Sword",
+  "item.re-variant.warped_pickaxe": "Warped Pickaxe",
+  "item.re-variant.warped_axe": "Warped Axe",
+  "item.re-variant.warped_shovel": "Warped Shovel",
+  "item.re-variant.warped_hoe": "Warped Hoe",
+
+
   "itemGroup.re-variant.wooden_variants": "Wooden Variants"
 }

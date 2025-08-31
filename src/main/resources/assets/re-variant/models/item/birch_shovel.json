@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "re-variant:item/mangrove_shovel"
+    "layer0": "re-variant:item/birch_shovel"
   }
 }

@@ -16,13 +16,16 @@ public class AcaciaBuffs {
 
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
-        boolean InsideBirch = biome.matchesKey(BiomeKeys.BIRCH_FOREST);
-        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.BIRCH_TOOLS);
+        boolean InsideSavanna =
+                biome.matchesKey(BiomeKeys.SAVANNA) ||
+                biome.matchesKey(BiomeKeys.SAVANNA_PLATEAU) ||
+                biome.matchesKey(BiomeKeys.WINDSWEPT_FOREST);
+        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.ACACIA_TOOLS);
 
 
-        if (InsideBirch && HasTagItem) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 219, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 219, 0));
+        if (InsideSavanna && HasTagItem) {
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 219, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 219, 0));
         }
         }
 

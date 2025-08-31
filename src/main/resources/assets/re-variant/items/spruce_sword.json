@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "re-variant:item/acacia_shovel"
+    "model": "re-variant:item/spruce_sword"
   }
 }

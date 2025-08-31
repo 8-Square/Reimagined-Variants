@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "re-variant:item/mangrove_shovel"
+    "model": "re-variant:item/birch_shovel"
   }
 }

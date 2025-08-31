@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "re-variant:item/acacia_pickaxe"
+    "layer0": "re-variant:item/spruce_axe"
   }
 }

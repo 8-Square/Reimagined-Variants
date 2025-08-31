@@ -9,23 +9,25 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 
-public class BirchBuffs {
+public class SpruceBuffs {
 
-    private BirchBuffs() {}
+    private SpruceBuffs() {}
 
 
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
-        boolean InsideBirch =
-                biome.matchesKey(BiomeKeys.BIRCH_FOREST) ||
-                biome.matchesKey(BiomeKeys.FOREST) ||
-                biome.matchesKey(BiomeKeys.MEADOW) ||
-                biome.matchesKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST);
-        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.BIRCH_TOOLS);
+        boolean InsideSpruce =
+                biome.matchesKey(BiomeKeys.TAIGA) ||
+                biome.matchesKey(BiomeKeys.GROVE) ||
+                biome.matchesKey(BiomeKeys.WINDSWEPT_FOREST) ||
+                biome.matchesKey(BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA) ||
+                biome.matchesKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA) ||
+                biome.matchesKey(BiomeKeys.SNOWY_TAIGA);
+        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.SPRUCE_TOOLS);
 
 
-        if (InsideBirch && HasTagItem) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 219, 0));
+        if (InsideSpruce && HasTagItem) {
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 219, 0));
             player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 219, 0));
         }
         }
@@ -33,7 +35,7 @@ public class BirchBuffs {
     public static void initialize() {
         ServerTickEvents.END_SERVER_TICK.register(server  ->
                 server.getPlayerManager().getPlayerList()
-                        .forEach(BirchBuffs::ApplyBuff));
+                        .forEach(SpruceBuffs::ApplyBuff));
     }
 }
 

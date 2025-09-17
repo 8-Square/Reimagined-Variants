@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MM ",
+    "MS ",
+    " S "
+  ],
+  "key": {
+    "M": [
+      "minecraft:mangrove_planks"
+    ],
+    "S": [
+      "minecraft:stick"
+    ]
+  },
+  "result": {
+    "id": "re-variant:mangrove_axe",
+    "count": 1
+  }
+}

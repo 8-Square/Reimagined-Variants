@@ -1,7 +1,6 @@
 package me.foursquare;
 
-import me.foursquare.buff.CherryGroveBuffs;
-import me.foursquare.buff.MangroveBuffs;
+import me.foursquare.buff.*;
 import me.foursquare.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -18,8 +17,16 @@ public class    ReimaginedVariants implements ModInitializer {
 
         ModItems.initialize();
 
+        // BIOME TOOL BUFFS
         CherryGroveBuffs.initialize();
         MangroveBuffs.initialize();
+        AcaciaBuffs.initialize();
+        BambooBuffs.initialize();
+        BirchBuffs.initialize();
+        JungleBuffs.initialize();
+        SpruceBuffs.initialize();
+        WarpedBuffs.initialize();
+        CrimsonBuffs.initialize();
 
 		LOGGER.info("Hello Fabric world!");
 	}

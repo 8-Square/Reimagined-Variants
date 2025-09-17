@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " C ",
+    " C ",
+    " S "
+  ],
+  "key": {
+    "C": [
+      "minecraft:mangrove_planks"
+    ],
+    "S": [
+      "minecraft:stick"
+    ]
+  },
+  "result": {
+    "id": "re-variant:mangrove_sword",
+    "count": 1
+  }
+}

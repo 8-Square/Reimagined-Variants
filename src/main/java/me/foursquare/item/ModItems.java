@@ -31,7 +31,7 @@ public class ModItems {
             "cherry_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.CHERRY_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -39,7 +39,7 @@ public class ModItems {
             "cherry_pickaxe",
             Item::new,
             new Item.Settings().pickaxe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.CHERRY_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -47,7 +47,7 @@ public class ModItems {
             "cherry_axe",
             Item::new,
             new Item.Settings().axe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.CHERRY_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -55,7 +55,7 @@ public class ModItems {
             "cherry_hoe",
             Item::new,
             new Item.Settings().hoe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.CHERRY_TOOL_MATERIAL,
                     0.0f,
                     -3.0f
             ));
@@ -63,7 +63,7 @@ public class ModItems {
             "cherry_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.CHERRY_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -73,7 +73,7 @@ public class ModItems {
             "mangrove_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.MANGROVE_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -81,7 +81,7 @@ public class ModItems {
             "mangrove_pickaxe",
             Item::new,
             new Item.Settings().pickaxe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.MANGROVE_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -89,7 +89,7 @@ public class ModItems {
             "mangrove_axe",
             Item::new,
             new Item.Settings().axe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.MANGROVE_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -97,7 +97,7 @@ public class ModItems {
             "mangrove_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.MANGROVE_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -105,7 +105,7 @@ public class ModItems {
             "mangrove_hoe",
             Item::new,
             new Item.Settings().hoe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.MANGROVE_TOOL_MATERIAL,
                     0.0f,
                     -3.0f
             ));
@@ -115,7 +115,7 @@ public class ModItems {
             "birch_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.BIRCH_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -123,7 +123,7 @@ public class ModItems {
             "birch_pickaxe",
             Item::new,
             new Item.Settings().pickaxe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.BIRCH_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -131,7 +131,7 @@ public class ModItems {
             "birch_axe",
             Item::new,
             new Item.Settings().axe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.BIRCH_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -139,7 +139,7 @@ public class ModItems {
             "birch_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.BIRCH_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -147,7 +147,7 @@ public class ModItems {
             "birch_hoe",
             Item::new,
             new Item.Settings().hoe(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.BIRCH_TOOL_MATERIAL,
                     -0.0f,
                     -3.0f
             ));
@@ -157,7 +157,7 @@ public class ModItems {
             "acacia_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.ACACIA_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -165,7 +165,7 @@ public class ModItems {
             "acacia_pickaxe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.ACACIA_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -173,7 +173,7 @@ public class ModItems {
             "acacia_axe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.ACACIA_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -181,7 +181,7 @@ public class ModItems {
             "acacia_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.ACACIA_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -189,7 +189,7 @@ public class ModItems {
             "acacia_hoe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.ACACIA_TOOL_MATERIAL,
                     0.0f,
                     -3.0f
             ));
@@ -199,7 +199,7 @@ public class ModItems {
             "spruce_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.SPRUCE_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -207,7 +207,7 @@ public class ModItems {
             "spruce_pickaxe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.SPRUCE_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -215,7 +215,7 @@ public class ModItems {
             "spruce_axe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.SPRUCE_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -223,7 +223,7 @@ public class ModItems {
             "spruce_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.SPRUCE_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -231,7 +231,49 @@ public class ModItems {
             "spruce_hoe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.SPRUCE_TOOL_MATERIAL,
+                    0.0f,
+                    -3.0f
+            ));
+
+    // JUNGLE TOOLS ------------------------------------------
+    public static final Item JUNGLE_SWORD = register(
+            "jungle_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ModToolMaterial.JUNGLE_TOOL_MATERIAL,
+                    3.0f,
+                    -2.4f
+            ));
+    public static final Item JUNGLE_PICKAXE = register(
+            "jungle_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.JUNGLE_TOOL_MATERIAL,
+                    1.0f,
+                    -2.8f
+            ));
+    public static final Item JUNGLE_AXE = register(
+            "jungle_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.JUNGLE_TOOL_MATERIAL,
+                    6.0f,
+                    -3.2f
+            ));
+    public static final Item JUNGLE_SHOVEL = register(
+            "jungle_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.JUNGLE_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item JUNGLE_HOE = register(
+            "jungle_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.JUNGLE_TOOL_MATERIAL,
                     0.0f,
                     -3.0f
             ));
@@ -241,7 +283,7 @@ public class ModItems {
             "warped_sword",
             Item::new,
             new Item.Settings().sword(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.WARPED_TOOL_MATERIAL,
                     3.0f,
                     -2.4f
             ));
@@ -249,7 +291,7 @@ public class ModItems {
             "warped_pickaxe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.WARPED_TOOL_MATERIAL,
                     1.0f,
                     -2.8f
             ));
@@ -257,7 +299,7 @@ public class ModItems {
             "warped_axe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.WARPED_TOOL_MATERIAL,
                     6.0f,
                     -3.2f
             ));
@@ -265,7 +307,7 @@ public class ModItems {
             "warped_shovel",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.WARPED_TOOL_MATERIAL,
                     1.5f,
                     -3.0f
             ));
@@ -273,11 +315,101 @@ public class ModItems {
             "warped_hoe",
             Item::new,
             new Item.Settings().shovel(
-                    ToolMaterial.WOOD,
+                    ModToolMaterial.WARPED_TOOL_MATERIAL,
                     0.0f,
                     -3.0f
             ));
 
+    // CRIMSON TOOLS ////////////////////////////////////////////////////////
+    public static final Item CRIMSON_SWORD = register(
+            "crimson_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ModToolMaterial.CRIMSON_TOOL_MATERIAL,
+                    3.0f,
+                    -2.4f
+            ));
+    public static final Item CRIMSON_PICKAXE = register(
+            "crimson_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.CRIMSON_TOOL_MATERIAL,
+                    1.0f,
+                    -2.8f
+            ));
+    public static final Item CRIMSON_AXE = register(
+            "crimson_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.CRIMSON_TOOL_MATERIAL,
+                    6.0f,
+                    -3.2f
+            ));
+    public static final Item CRIMSON_SHOVEL = register(
+            "crimson_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.CRIMSON_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item CRIMSON_HOE = register(
+            "crimson_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.CRIMSON_TOOL_MATERIAL,
+                    0.0f,
+                    -3.0f
+            ));
+
+
+    // BAMBOO TOOLS ////////////////////////////////////////////////////////
+    public static final Item BAMBOO_SWORD = register(
+            "bamboo_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ModToolMaterial.BAMBOO_TOOL_MATERIAL,
+                    3.0f,
+                    -2.4f
+            ));
+    public static final Item BAMBOO_PICKAXE = register(
+            "bamboo_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.BAMBOO_TOOL_MATERIAL,
+                    1.0f,
+                    -2.8f
+            ));
+    public static final Item BAMBOO_AXE = register(
+            "bamboo_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.BAMBOO_TOOL_MATERIAL,
+                    6.0f,
+                    -3.2f
+            ));
+    public static final Item BAMBOO_SHOVEL = register(
+            "bamboo_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.BAMBOO_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item BAMBOO_HOE = register(
+            "bamboo_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.BAMBOO_TOOL_MATERIAL,
+                    0.0f,
+                    -3.0f
+            ));
+
+
+
+    // STONE TYPES
+
+    // COBBLESTONE PICKAXE
 
 
     public static final RegistryKey<ItemGroup> WOODEN_VARIANTS_KEY = RegistryKey.of(
@@ -298,31 +430,54 @@ public class ModItems {
             itemGroup.add(ModItems.CHERRY_AXE);
             itemGroup.add(ModItems.CHERRY_SHOVEL);
             itemGroup.add(ModItems.CHERRY_HOE);
+
             itemGroup.add(ModItems.MANGROVE_SWORD);
             itemGroup.add(ModItems.MANGROVE_PICKAXE);
             itemGroup.add(ModItems.MANGROVE_AXE);
             itemGroup.add(ModItems.MANGROVE_SHOVEL);
             itemGroup.add(ModItems.MANGROVE_HOE);
+
             itemGroup.add(ModItems.BIRCH_SWORD);
             itemGroup.add(ModItems.BIRCH_PICKAXE);
             itemGroup.add(ModItems.BIRCH_AXE);
             itemGroup.add(ModItems.BIRCH_SHOVEL);
             itemGroup.add(ModItems.BIRCH_HOE);
+
             itemGroup.add(ModItems.ACACIA_SWORD);
             itemGroup.add(ModItems.ACACIA_PICKAXE);
             itemGroup.add(ModItems.ACACIA_AXE);
             itemGroup.add(ModItems.ACACIA_SHOVEL);
             itemGroup.add(ModItems.ACACIA_HOE);
+
             itemGroup.add(ModItems.SPRUCE_SWORD);
             itemGroup.add(ModItems.SPRUCE_PICKAXE);
             itemGroup.add(ModItems.SPRUCE_AXE);
             itemGroup.add(ModItems.SPRUCE_SHOVEL);
             itemGroup.add(ModItems.SPRUCE_HOE);
+
+            itemGroup.add(ModItems.JUNGLE_SWORD);
+            itemGroup.add(ModItems.JUNGLE_PICKAXE);
+            itemGroup.add(ModItems.JUNGLE_AXE);
+            itemGroup.add(ModItems.JUNGLE_SHOVEL);
+            itemGroup.add(ModItems.JUNGLE_HOE);
+
             itemGroup.add(ModItems.WARPED_SWORD);
             itemGroup.add(ModItems.WARPED_PICKAXE);
             itemGroup.add(ModItems.WARPED_AXE);
             itemGroup.add(ModItems.WARPED_SHOVEL);
             itemGroup.add(ModItems.WARPED_HOE);
+
+            itemGroup.add(ModItems.CRIMSON_SWORD);
+            itemGroup.add(ModItems.CRIMSON_PICKAXE);
+            itemGroup.add(ModItems.CRIMSON_AXE);
+            itemGroup.add(ModItems.CRIMSON_SHOVEL);
+            itemGroup.add(ModItems.CRIMSON_HOE);
+
+            itemGroup.add(ModItems.BAMBOO_SWORD);
+            itemGroup.add(ModItems.BAMBOO_PICKAXE);
+            itemGroup.add(ModItems.BAMBOO_AXE);
+            itemGroup.add(ModItems.BAMBOO_SHOVEL);
+            itemGroup.add(ModItems.BAMBOO_HOE);
         });
     }
 }

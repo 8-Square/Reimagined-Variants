@@ -77,5 +77,12 @@ public class ModToolMaterial {
             15,
             ModItemTagProvider.REPAIRS_BAMBOO_TOOLS
     );
-
+    public static final ToolMaterial DARK_OAK_TOOL_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+            62,
+            2.0f,
+            0.0f,
+            15,
+            ModItemTagProvider.REPAIRS_DARK_OAK_TOOLS
+    );
 }

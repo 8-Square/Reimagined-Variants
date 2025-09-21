@@ -1,42 +1,36 @@
 package me.foursquare.buff;
 
-import me.foursquare.ReimaginedVariants;
-import me.foursquare.datagen.ModBiomeTagProvider;
 import me.foursquare.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 
-import javax.swing.text.html.HTML;
+public class DarkOakBuffs {
 
-public class SpruceBuffs {
-
-    private SpruceBuffs() {}
+    private DarkOakBuffs() {}
 
 
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
-        boolean InsideSpruce = biome.isIn(ModBiomeTagProvider.SPRUCE_BIOMES);
-        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.SPRUCE_TOOLS);
+        boolean InsideDarkOak =
+                biome.matchesKey(BiomeKeys.DARK_FOREST);
+        boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.DARK_OAK_TOOLS);
 
 
-        if (InsideSpruce && HasTagItem) {
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 219, 0));
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 219, 0));
+        if (InsideDarkOak && HasTagItem) {
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 219, 0));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 219, 0));
         }
         }
 
     public static void initialize() {
         ServerTickEvents.END_SERVER_TICK.register(server  ->
                 server.getPlayerManager().getPlayerList()
-                        .forEach(SpruceBuffs::ApplyBuff));
+                        .forEach(DarkOakBuffs::ApplyBuff));
     }
 }
 

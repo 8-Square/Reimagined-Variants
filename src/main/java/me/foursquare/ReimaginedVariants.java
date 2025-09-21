@@ -27,6 +27,7 @@ public class    ReimaginedVariants implements ModInitializer {
         SpruceBuffs.initialize();
         WarpedBuffs.initialize();
         CrimsonBuffs.initialize();
+        DarkOakBuffs.initialize();
 
 		LOGGER.info("Hello Fabric world!");
 	}

@@ -7,8 +7,8 @@ import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
 
-public class ModModelTagProvider extends FabricModelProvider {
-    public ModModelTagProvider(FabricDataOutput output) {
+public class ModModelProvider extends FabricModelProvider {
+    public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
 
@@ -81,5 +81,12 @@ public class ModModelTagProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BAMBOO_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BAMBOO_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BAMBOO_HOE, Models.HANDHELD);
+
+        // DARK OAK TOOLS
+        itemModelGenerator.register(ModItems.DARK_OAK_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DARK_OAK_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DARK_OAK_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DARK_OAK_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DARK_OAK_HOE, Models.HANDHELD);
     }
 }

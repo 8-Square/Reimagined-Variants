@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:re-variant/get_mangrove_tool",
+  "criteria": {
+    "got_all_mangrove_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "re-variant:mangrove_sword"
+          },
+          {
+            "items": "re-variant:mangrove_pickaxe"
+          },
+          {
+            "items": "re-variant:mangrove_axe"
+          },
+          {
+            "items": "re-variant:mangrove_shovel"
+          },
+          {
+            "items": "re-variant:mangrove_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_mangrove_biome": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:cherry_grove"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": "You either got really lucky or travelled 10k blocks to get to this biome",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "re-variant:mangrove_pickaxe"
+    },
+    "title": "Mangrove+"
+  },
+  "requirements": [
+    [
+      "got_all_mangrove_tool"
+    ],
+    [
+      "got_mangrove_biome"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

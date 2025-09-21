@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:re-variant/get_spruce_tool",
+  "criteria": {
+    "got_all_spruce_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "re-variant:spruce_sword"
+          },
+          {
+            "items": "re-variant:spruce_pickaxe"
+          },
+          {
+            "items": "re-variant:spruce_axe"
+          },
+          {
+            "items": "re-variant:spruce_shovel"
+          },
+          {
+            "items": "re-variant:spruce_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_spruce_biome": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "minecraft:taiga"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": "All spruce tools crafted!",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "re-variant:spruce_pickaxe"
+    },
+    "title": "Spruce To Perfection"
+  },
+  "requirements": [
+    [
+      "got_all_spruce_tool"
+    ],
+    [
+      "got_spruce_biome"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

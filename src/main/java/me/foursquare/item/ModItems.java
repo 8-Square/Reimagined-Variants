@@ -406,7 +406,47 @@ public class ModItems {
             ));
 
 
-
+    // DARK OAK TOOLS ////////////////////////////////////////////////////////
+    public static final Item DARK_OAK_SWORD = register(
+            "dark_oak_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ModToolMaterial.DARK_OAK_TOOL_MATERIAL,
+                    3.0f,
+                    -2.4f
+            ));
+    public static final Item DARK_OAK_PICKAXE = register(
+            "dark_oak_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.DARK_OAK_TOOL_MATERIAL,
+                    1.0f,
+                    -2.8f
+            ));
+    public static final Item DARK_OAK_AXE = register(
+            "dark_oak_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.DARK_OAK_TOOL_MATERIAL,
+                    6.0f,
+                    -3.2f
+            ));
+    public static final Item DARK_OAK_SHOVEL = register(
+            "dark_oak_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.DARK_OAK_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item DARK_OAK_HOE = register(
+            "dark_oak_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.DARK_OAK_TOOL_MATERIAL,
+                    0.0f,
+                    -3.0f
+            ));
     // STONE TYPES
 
     // COBBLESTONE PICKAXE
@@ -478,6 +518,12 @@ public class ModItems {
             itemGroup.add(ModItems.BAMBOO_AXE);
             itemGroup.add(ModItems.BAMBOO_SHOVEL);
             itemGroup.add(ModItems.BAMBOO_HOE);
+
+            itemGroup.add(ModItems.DARK_OAK_AXE);
+            itemGroup.add(ModItems.DARK_OAK_PICKAXE);
+            itemGroup.add(ModItems.DARK_OAK_SWORD);
+            itemGroup.add(ModItems.DARK_OAK_SHOVEL);
+            itemGroup.add(ModItems.DARK_OAK_HOE);
         });
     }
 }

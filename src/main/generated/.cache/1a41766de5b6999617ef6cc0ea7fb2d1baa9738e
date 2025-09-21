@@ -1,0 +1,8 @@
+// 1.21.8	-999999999-01-01T00:00:00	Reimagined Variants/Advancements
+002f382e411330585e7cb655e870fd159c5e0a81 data/minecraft/advancement/re-variant/get_all_cherry_tool.json
+67c4b3e57d4e86fa30441d1670021721d8441897 data/minecraft/advancement/re-variant/get_all_mangrove_tool.json
+27efe3250023baab8542011ebfbe2c6ec5ace03e data/minecraft/advancement/re-variant/get_all_spruce_tool.json
+35bc021665945d024bad079e618644a12c2bc9a7 data/minecraft/advancement/re-variant/get_cherry_tool.json
+4482ee7424bea2515e88f55b7ced20974c8d6a8c data/minecraft/advancement/re-variant/get_mangrove_tool.json
+6a7fce832d84d061c8958d907538afa7e5370765 data/minecraft/advancement/re-variant/get_spruce_tool.json
+3d6478a2dfd32930f85a78674d3433209ec693a7 data/minecraft/advancement/re-variant/get_wood_variant_tool.json

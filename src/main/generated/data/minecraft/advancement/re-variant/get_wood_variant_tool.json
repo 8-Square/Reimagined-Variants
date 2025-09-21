@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "got_wood_variant_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#re-variant:wooden_variant_tools"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "re-variant:gui/advancement/cherry",
+    "description": "Craft A Wooden Tool Variant",
+    "icon": {
+      "count": 1,
+      "id": "re-variant:crimson_axe"
+    },
+    "title": "Reimagined Variants"
+  },
+  "requirements": [
+    [
+      "got_wood_variant_tool"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -29,12 +29,29 @@
   "item.re-variant.spruce_shovel": "Spruce Shovel",
   "item.re-variant.spruce_hoe": "Spruce Hoe",
 
+  "item.re-variant.jungle_sword": "Jungle Sword",
+  "item.re-variant.jungle_pickaxe": "Jungle Pickaxe",
+  "item.re-variant.jungle_axe": "Jungle Axe",
+  "item.re-variant.jungle_shovel": "Jungle Shovel",
+  "item.re-variant.jungle_hoe": "Jungle Hoe",
+
   "item.re-variant.warped_sword": "Warped Sword",
   "item.re-variant.warped_pickaxe": "Warped Pickaxe",
   "item.re-variant.warped_axe": "Warped Axe",
   "item.re-variant.warped_shovel": "Warped Shovel",
   "item.re-variant.warped_hoe": "Warped Hoe",
 
+  "item.re-variant.crimson_sword": "Crimson Sword",
+  "item.re-variant.crimson_pickaxe": "Crimson Pickaxe",
+  "item.re-variant.crimson_axe": "Crimson Axe",
+  "item.re-variant.crimson_shovel": "Crimson Shovel",
+  "item.re-variant.crimson_hoe": "Crimson Hoe",
+
+  "item.re-variant.bamboo_sword": "Bamboo Sword",
+  "item.re-variant.bamboo_pickaxe": "Bamboo Pickaxe",
+  "item.re-variant.bamboo_axe": "Bamboo Axe",
+  "item.re-variant.bamboo_shovel": "Bamboo Shovel",
+  "item.re-variant.bamboo_hoe": "Bamboo Hoe",
 
   "itemGroup.re-variant.wooden_variants": "Wooden Variants"
 }

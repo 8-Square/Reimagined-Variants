@@ -24,6 +24,11 @@ db23fdbfd54ea52538f844759997fc0a60be08a2 assets/re-variant/items/cherry_sword.js
 5a41c8e5aac64b20d898c390fcff405c40e278a6 assets/re-variant/items/crimson_pickaxe.json
 4bece9d7aec538a287b8e764b9b9da214d824e1b assets/re-variant/items/crimson_shovel.json
 70bfe6ff75c705940921790dc47dc3b31f09bbb2 assets/re-variant/items/crimson_sword.json
+798f97c50a9cd7af1f1c85a531d2dabb486b38e6 assets/re-variant/items/dark_oak_axe.json
+8a064ee61f166790c89edfb2c042c770125b647f assets/re-variant/items/dark_oak_hoe.json
+8461ada4841405c40b938317426f91c1512cc545 assets/re-variant/items/dark_oak_pickaxe.json
+aba373289079e4cddc5489b00af94a17a706b1a1 assets/re-variant/items/dark_oak_shovel.json
+fe25f60b3ee46105181a8c4db6a89fe59335f53e assets/re-variant/items/dark_oak_sword.json
 724f91a6e5b50f881c6cf6075d1b8dc472032610 assets/re-variant/items/jungle_axe.json
 3d17f68e3aca170c1a656279ef86d4bb6023aa6b assets/re-variant/items/jungle_hoe.json
 b2723b73c110ab50f01ef8fc00bcc3758fd7cb28 assets/re-variant/items/jungle_pickaxe.json
@@ -69,6 +74,11 @@ ac731f023cfedb27457ec8004ab86ac4464e950a assets/re-variant/models/item/cherry_sw
 bb7e3828bcc2a02c714bb18091cf07f95ecc2977 assets/re-variant/models/item/crimson_pickaxe.json
 517b0989ccb0e89d4b0308c25cd254bff453662c assets/re-variant/models/item/crimson_shovel.json
 c0e14e3c3f9bd0898e863871f094120317360ef4 assets/re-variant/models/item/crimson_sword.json
+8d1c3ec508f3ee9774951330e7f98739db666e2e assets/re-variant/models/item/dark_oak_axe.json
+50801b534310ee6d727909f292ee3619f395f4aa assets/re-variant/models/item/dark_oak_hoe.json
+cd45f510a33f6869f63f64ef3fb2de9341979034 assets/re-variant/models/item/dark_oak_pickaxe.json
+7a373c73a3a856a05d983228c54ad0dd77d2a4bc assets/re-variant/models/item/dark_oak_shovel.json
+42fda2c475671136997a8afb4e74d6b40c43f0eb assets/re-variant/models/item/dark_oak_sword.json
 c84cb48b42a9efbfd50a691d3a9b105735a0f2f1 assets/re-variant/models/item/jungle_axe.json
 85ea081737c4e4f16f4df734e38b0326d4363643 assets/re-variant/models/item/jungle_hoe.json
 9b1e4fbc4315f3d30893610ad3518c743d6a6120 assets/re-variant/models/item/jungle_pickaxe.json

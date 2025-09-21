@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "re-variant:item/dark_oak_sword"
+  }
+}

@@ -20,6 +20,7 @@ import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagGroupLoader;
 import net.minecraft.text.Text;
@@ -44,10 +45,12 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         final RegistryEntryLookup<Item> itemLookup = wrapperLookup.getOrThrow(RegistryKeys.ITEM);
         final RegistryEntry<Biome> cherryGrove = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.CHERRY_GROVE);
         final RegistryEntry<Biome> mangrove = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.MANGROVE_SWAMP);
-        final RegistryEntry<Biome> spruce = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.TAIGA);
-
-//        ItemPredicate cherryToolPredicate = ItemPredicate.Builder.create()
-//                .tag(itemLookup, ModItemTagProvider.CHERRY_TOOLS).build();
+        final RegistryEntryList.Named<Biome> spruce = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.SPRUCE_BIOMES);
+        final RegistryEntryList.Named<Biome> birch = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.BIRCH_BIOMES);
+        final RegistryEntryList.Named<Biome> warped = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.WARPED_BIOMES);
+        final RegistryEntryList.Named<Biome> crimson = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.CRIMSON_BIOMES);
+        final RegistryEntryList.Named<Biome> jungle = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.JUNGLE_BIOMES);
+        final RegistryEntryList.Named<Biome> acacia = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.ACACIA_BIOMES);
 
         AdvancementEntry getCustomWoodVariant = Advancement.Builder.create()
                 .display(
@@ -65,6 +68,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_wood_variant_tool");
 
+// <editor-fold desc="CHERRY ADVANCEMENTS">
         AdvancementEntry getCherryTool = Advancement.Builder.create()
                 .parent(getCustomWoodVariant)
                 .display(
@@ -108,7 +112,9 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         EntityPredicate.Builder.create().location(LocationPredicate.Builder.createBiome(cherryGrove)
                         )))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_cherry_tool");
+// </editor-fold>
 
+// <editor-fold desc="MANGROVE ADVANCEMENTS">
         AdvancementEntry getMangroveTool = Advancement.Builder.create()
                 .parent(getCustomWoodVariant)
                 .display(
@@ -152,7 +158,9 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         EntityPredicate.Builder.create().location(LocationPredicate.Builder.createBiome(cherryGrove)
                         )))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_mangrove_tool");
+// </editor-fold>
 
+// <editor-fold desc="SPRUCE ADVANCEMENTS">
         AdvancementEntry getSpruceTool = Advancement.Builder.create()
                 .parent(getCustomWoodVariant)
                 .display(
@@ -169,7 +177,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.SPRUCE_TOOLS).build()
                 ))
                 .criterion("got_spruce_biome", TickCriterion.Conditions.createLocation(
-                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.createBiome(spruce)
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(spruce)
                         )))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_spruce_tool");
 
@@ -193,8 +201,245 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         ModItems.SPRUCE_HOE
                 ))
                 .criterion("got_spruce_biome", TickCriterion.Conditions.createLocation(
-                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.createBiome(spruce)
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(spruce)
                         )))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_spruce_tool");
+// </editor-fold>
+
+// <editor-fold desc="BIRCH ADVANCEMENTS">
+        AdvancementEntry getBirchTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.BIRCH_SWORD,
+                        Text.literal("Someone Actually Uses Birch??"),
+                        Text.literal("Never expected someone to craft this"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_birch_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.BIRCH_TOOLS).build()
+                ))
+                .criterion("got_birch_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(birch)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_birch_tool");
+
+        AdvancementEntry getAllBirchTool = Advancement.Builder.create()
+                .parent(getSpruceTool)
+                .display(
+                        ModItems.BIRCH_PICKAXE,
+                        Text.literal("Barking Up The Wrong Tree"),
+                        Text.literal("You crafted all birch tools, Take a hidden achievement"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_birch_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.BIRCH_SWORD,
+                        ModItems.BIRCH_PICKAXE,
+                        ModItems.BIRCH_AXE,
+                        ModItems.BIRCH_SHOVEL,
+                        ModItems.BIRCH_HOE
+                ))
+                .criterion("got_birch_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(birch)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_birch_tool");
+// </editor-fold>
+
+// <editor-fold desc="ACACIA ADVANCEMENTS">
+        AdvancementEntry getAcaciaTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.ACACIA_SWORD,
+                        Text.literal("Someone Actually Uses Acacia??"),
+                        Text.literal("Never expected someone to craft this"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_acacia_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.ACACIA_TOOLS).build()
+                ))
+                .criterion("got_acacia_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(acacia)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_acacia_tool");
+
+        AdvancementEntry getAllAcaciaTool = Advancement.Builder.create()
+                .parent(getAcaciaTool)
+                .display(
+                        ModItems.ACACIA_PICKAXE,
+                        Text.literal("Barking Up The Wrong Tree"),
+                        Text.literal("You crafted all acacia tools, Take a hidden achievement"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_acacia_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.ACACIA_SWORD,
+                        ModItems.ACACIA_PICKAXE,
+                        ModItems.ACACIA_AXE,
+                        ModItems.ACACIA_SHOVEL,
+                        ModItems.ACACIA_HOE
+                ))
+                .criterion("got_acacia_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(acacia)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_acacia_tool");
+// </editor-fold>
+
+// <editor-fold desc="JUNGLE ADVANCEMENTS">
+        AdvancementEntry getJungleTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.JUNGLE_SWORD,
+                        Text.literal("Jungle Tools"),
+                        Text.literal(""),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_jungle_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.JUNGLE_TOOLS).build()
+                ))
+                .criterion("got_jungle_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(jungle)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_jungle_tool");
+
+        AdvancementEntry getAllJungleTool = Advancement.Builder.create()
+                .parent(getJungleTool)
+                .display(
+                        ModItems.JUNGLE_PICKAXE,
+                        Text.literal("The Jungle"),
+                        Text.literal("What An Annoying Place"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_jungle_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.JUNGLE_SWORD,
+                        ModItems.JUNGLE_PICKAXE,
+                        ModItems.JUNGLE_AXE,
+                        ModItems.JUNGLE_SHOVEL,
+                        ModItems.JUNGLE_HOE
+                ))
+                .criterion("got_jungle_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(jungle)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_jungle_tool");
+// </editor-fold>
+
+// <editor-fold desc="WARPED ADVANCEMENTS">
+        AdvancementEntry getWarpedTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.WARPED_SWORD,
+                        Text.literal("Warped Your Way"),
+                        Text.literal("Never expected someone to craft this"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_warped_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.WARPED_TOOLS).build()
+                ))
+                .criterion("got_warped_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(warped)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_warped_tool");
+
+        AdvancementEntry getAllWarpedTool = Advancement.Builder.create()
+                .parent(getWarpedTool)
+                .display(
+                        ModItems.WARPED_PICKAXE,
+                        Text.literal("Warped Ambitions"),
+                        Text.literal("You crafted all warped tools, Take a hidden achievement"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_warped_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.WARPED_SWORD,
+                        ModItems.WARPED_PICKAXE,
+                        ModItems.WARPED_AXE,
+                        ModItems.WARPED_SHOVEL,
+                        ModItems.WARPED_HOE
+                ))
+                .criterion("got_warped_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(warped)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_warped_tool");
+// </editor-fold>
+
+// <editor-fold desc="CRIMSON ADVANCEMENTS">
+        AdvancementEntry getCrimsonTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.CRIMSON_SWORD,
+                        Text.literal("Red as Blood"),
+                        Text.literal("Obtain A Crimson Tool"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_crimson_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.CRIMSON_TOOLS).build()
+                ))
+                .criterion("got_crimson_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(crimson)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_crimson_tool");
+
+        AdvancementEntry getAllCrimsonTool = Advancement.Builder.create()
+                .parent(getCrimsonTool)
+                .display(
+                        ModItems.CRIMSON_PICKAXE,
+                        Text.literal("Crimson Vengeance"),
+                        Text.literal("You crafted all crimson tools, Take a hidden achievement"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_crimson_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.CRIMSON_SWORD,
+                        ModItems.CRIMSON_PICKAXE,
+                        ModItems.CRIMSON_AXE,
+                        ModItems.CRIMSON_SHOVEL,
+                        ModItems.CRIMSON_HOE
+                ))
+                .criterion("got_crimson_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(crimson)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_crimson_tool");
+// </editor-fold>
     }
 }

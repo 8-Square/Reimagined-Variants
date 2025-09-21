@@ -1,0 +1,62 @@
+{
+  "parent": "minecraft:re-variant/get_acacia_tool",
+  "criteria": {
+    "got_acacia_biome": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "#re-variant:acacia_biomes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "got_all_acacia_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "re-variant:acacia_sword"
+          },
+          {
+            "items": "re-variant:acacia_pickaxe"
+          },
+          {
+            "items": "re-variant:acacia_axe"
+          },
+          {
+            "items": "re-variant:acacia_shovel"
+          },
+          {
+            "items": "re-variant:acacia_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "You crafted all acacia tools, Take a hidden achievement",
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "re-variant:acacia_pickaxe"
+    },
+    "title": "Barking Up The Wrong Tree"
+  },
+  "requirements": [
+    [
+      "got_all_acacia_tool"
+    ],
+    [
+      "got_acacia_biome"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

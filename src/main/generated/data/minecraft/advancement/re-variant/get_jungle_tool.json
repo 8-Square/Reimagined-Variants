@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:re-variant/get_wood_variant_tool",
   "criteria": {
-    "got_spruce_biome": {
+    "got_jungle_biome": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:spruce_biomes"
+                "biomes": "#re-variant:jungle_biomes"
               }
             }
           }
@@ -17,11 +17,11 @@
       },
       "trigger": "minecraft:location"
     },
-    "got_spruce_tool": {
+    "got_jungle_tool": {
       "conditions": {
         "items": [
           {
-            "items": "#re-variant:spruce_tools"
+            "items": "#re-variant:jungle_tools"
           }
         ]
       },
@@ -29,19 +29,19 @@
     }
   },
   "display": {
-    "description": "Mangroves are better than other trees",
+    "description": "",
     "icon": {
       "count": 1,
-      "id": "re-variant:spruce_sword"
+      "id": "re-variant:jungle_sword"
     },
-    "title": "Spruce Tools"
+    "title": "Jungle Tools"
   },
   "requirements": [
     [
-      "got_spruce_tool"
+      "got_jungle_tool"
     ],
     [
-      "got_spruce_biome"
+      "got_jungle_biome"
     ]
   ],
   "sends_telemetry_event": true

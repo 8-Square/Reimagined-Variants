@@ -1,5 +1,6 @@
 package me.foursquare.buff;
 
+import me.foursquare.datagen.ModBiomeTagProvider;
 import me.foursquare.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -16,8 +17,7 @@ public class CrimsonBuffs {
 
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
-        boolean InsideCrimson =
-                biome.matchesKey(BiomeKeys.CRIMSON_FOREST);
+        boolean InsideCrimson = biome.isIn(ModBiomeTagProvider.CRIMSON_BIOMES);
         boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.CRIMSON_TOOLS);
 
 

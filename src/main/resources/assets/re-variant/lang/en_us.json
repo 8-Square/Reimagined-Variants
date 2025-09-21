@@ -53,5 +53,11 @@
   "item.re-variant.bamboo_shovel": "Bamboo Shovel",
   "item.re-variant.bamboo_hoe": "Bamboo Hoe",
 
+  "item.re-variant.dark_oak_sword": "Dark Oak Sword",
+  "item.re-variant.dark_oak_pickaxe": "Dark Oak Pickaxe",
+  "item.re-variant.dark_oak_axe": "Dark Oak Axe",
+  "item.re-variant.dark_oak_shovel": "Dark Oak Shovel",
+  "item.re-variant.dark_oak_hoe": "Dark Oak Hoe",
+
   "itemGroup.re-variant.wooden_variants": "Wooden Variants"
 }

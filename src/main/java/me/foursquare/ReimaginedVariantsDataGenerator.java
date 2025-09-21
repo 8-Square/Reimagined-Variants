@@ -1,6 +1,7 @@
 package me.foursquare;
 
 import me.foursquare.datagen.ModAdvancementProvider;
+import me.foursquare.datagen.ModBiomeTagProvider;
 import me.foursquare.datagen.ModItemTagProvider;
 import me.foursquare.datagen.ModModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -14,5 +15,6 @@ public class ReimaginedVariantsDataGenerator implements DataGeneratorEntrypoint 
         pack.addProvider(ModItemTagProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModAdvancementProvider::new);
+        pack.addProvider(ModBiomeTagProvider::new);
 	}
 }

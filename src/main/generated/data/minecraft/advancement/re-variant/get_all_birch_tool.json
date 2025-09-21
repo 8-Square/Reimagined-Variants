@@ -1,29 +1,29 @@
 {
   "parent": "minecraft:re-variant/get_spruce_tool",
   "criteria": {
-    "got_all_spruce_tool": {
+    "got_all_birch_tool": {
       "conditions": {
         "items": [
           {
-            "items": "re-variant:spruce_sword"
+            "items": "re-variant:birch_sword"
           },
           {
-            "items": "re-variant:spruce_pickaxe"
+            "items": "re-variant:birch_pickaxe"
           },
           {
-            "items": "re-variant:spruce_axe"
+            "items": "re-variant:birch_axe"
           },
           {
-            "items": "re-variant:spruce_shovel"
+            "items": "re-variant:birch_shovel"
           },
           {
-            "items": "re-variant:spruce_hoe"
+            "items": "re-variant:birch_hoe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "got_spruce_biome": {
+    "got_birch_biome": {
       "conditions": {
         "player": [
           {
@@ -31,7 +31,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:spruce_biomes"
+                "biomes": "#re-variant:birch_biomes"
               }
             }
           }
@@ -41,20 +41,21 @@
     }
   },
   "display": {
-    "description": "All spruce tools crafted!",
+    "description": "You crafted all birch tools, Take a hidden achievement",
     "frame": "goal",
+    "hidden": true,
     "icon": {
       "count": 1,
-      "id": "re-variant:spruce_pickaxe"
+      "id": "re-variant:birch_pickaxe"
     },
-    "title": "Spruce To Perfection"
+    "title": "Barking Up The Wrong Tree"
   },
   "requirements": [
     [
-      "got_all_spruce_tool"
+      "got_all_birch_tool"
     ],
     [
-      "got_spruce_biome"
+      "got_birch_biome"
     ]
   ],
   "sends_telemetry_event": true

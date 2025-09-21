@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:re-variant/get_wood_variant_tool",
   "criteria": {
-    "got_spruce_biome": {
+    "got_warped_biome": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:spruce_biomes"
+                "biomes": "#re-variant:warped_biomes"
               }
             }
           }
@@ -17,11 +17,11 @@
       },
       "trigger": "minecraft:location"
     },
-    "got_spruce_tool": {
+    "got_warped_tool": {
       "conditions": {
         "items": [
           {
-            "items": "#re-variant:spruce_tools"
+            "items": "#re-variant:warped_tools"
           }
         ]
       },
@@ -29,19 +29,19 @@
     }
   },
   "display": {
-    "description": "Mangroves are better than other trees",
+    "description": "Never expected someone to craft this",
     "icon": {
       "count": 1,
-      "id": "re-variant:spruce_sword"
+      "id": "re-variant:warped_sword"
     },
-    "title": "Spruce Tools"
+    "title": "Warped Your Way"
   },
   "requirements": [
     [
-      "got_spruce_tool"
+      "got_warped_tool"
     ],
     [
-      "got_spruce_biome"
+      "got_warped_biome"
     ]
   ],
   "sends_telemetry_event": true

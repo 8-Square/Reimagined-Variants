@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:re-variant/get_wood_variant_tool",
+  "criteria": {
+    "got_all_regular_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wooden_sword"
+          },
+          {
+            "items": "minecraft:wooden_axe"
+          },
+          {
+            "items": "minecraft:wooden_pickaxe"
+          },
+          {
+            "items": "minecraft:wooden_hoe"
+          },
+          {
+            "items": "minecraft:wooden_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Really... this has to be on purpose...",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:wooden_pickaxe"
+    },
+    "title": "Extra Unordinary"
+  },
+  "requirements": [
+    [
+      "got_all_regular_tool"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

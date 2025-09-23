@@ -1,29 +1,29 @@
 {
-  "parent": "minecraft:re-variant/get_birch_tool",
+  "parent": "minecraft:re-variant/get_bamboo_tool",
   "criteria": {
-    "got_all_birch_tool": {
+    "got_all_bamboo_tool": {
       "conditions": {
         "items": [
           {
-            "items": "re-variant:birch_sword"
+            "items": "re-variant:bamboo_sword"
           },
           {
-            "items": "re-variant:birch_pickaxe"
+            "items": "re-variant:bamboo_pickaxe"
           },
           {
-            "items": "re-variant:birch_axe"
+            "items": "re-variant:bamboo_axe"
           },
           {
-            "items": "re-variant:birch_shovel"
+            "items": "re-variant:bamboo_shovel"
           },
           {
-            "items": "re-variant:birch_hoe"
+            "items": "re-variant:bamboo_hoe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "got_birch_biome": {
+    "got_bamboo_biome": {
       "conditions": {
         "player": [
           {
@@ -31,7 +31,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:birch_biomes"
+                "biomes": "#re-variant:bamboo_biomes"
               }
             }
           }
@@ -41,21 +41,20 @@
     }
   },
   "display": {
-    "description": "You crafted all birch tools, Take a hidden achievement",
+    "description": "Guess you really like pandas",
     "frame": "goal",
-    "hidden": true,
     "icon": {
       "count": 1,
-      "id": "re-variant:birch_pickaxe"
+      "id": "re-variant:bamboo_pickaxe"
     },
-    "title": "Barking Up The Wrong Tree"
+    "title": "Bamboo Dynasty"
   },
   "requirements": [
     [
-      "got_all_birch_tool"
+      "got_all_bamboo_tool"
     ],
     [
-      "got_birch_biome"
+      "got_bamboo_biome"
     ]
   ],
   "sends_telemetry_event": true

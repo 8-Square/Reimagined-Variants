@@ -1,29 +1,29 @@
 {
-  "parent": "minecraft:re-variant/get_birch_tool",
+  "parent": "minecraft:re-variant/get_dark_oak_tool",
   "criteria": {
-    "got_all_birch_tool": {
+    "got_all_dark_oak_tool": {
       "conditions": {
         "items": [
           {
-            "items": "re-variant:birch_sword"
+            "items": "re-variant:dark_oak_sword"
           },
           {
-            "items": "re-variant:birch_pickaxe"
+            "items": "re-variant:dark_oak_pickaxe"
           },
           {
-            "items": "re-variant:birch_axe"
+            "items": "re-variant:dark_oak_axe"
           },
           {
-            "items": "re-variant:birch_shovel"
+            "items": "re-variant:dark_oak_shovel"
           },
           {
-            "items": "re-variant:birch_hoe"
+            "items": "re-variant:dark_oak_hoe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "got_birch_biome": {
+    "got_dark_oak_biome": {
       "conditions": {
         "player": [
           {
@@ -31,7 +31,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:birch_biomes"
+                "biomes": "#re-variant:dark_oak_biomes"
               }
             }
           }
@@ -41,22 +41,24 @@
     }
   },
   "display": {
-    "description": "You crafted all birch tools, Take a hidden achievement",
+    "description": "It takes a bit of dedication to get here and do all this",
     "frame": "goal",
-    "hidden": true,
     "icon": {
       "count": 1,
-      "id": "re-variant:birch_pickaxe"
+      "id": "re-variant:crimson_pickaxe"
     },
-    "title": "Barking Up The Wrong Tree"
+    "title": "The Dark One"
   },
   "requirements": [
     [
-      "got_all_birch_tool"
+      "got_all_dark_oak_tool"
     ],
     [
-      "got_birch_biome"
+      "got_dark_oak_biome"
     ]
   ],
+  "rewards": {
+    "experience": 100
+  },
   "sends_telemetry_event": true
 }

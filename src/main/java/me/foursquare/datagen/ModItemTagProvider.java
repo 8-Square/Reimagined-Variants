@@ -1,7 +1,6 @@
 package me.foursquare.datagen;
 
 import me.foursquare.ReimaginedVariants;
-import me.foursquare.buff.CherryGroveBuffs;
 import me.foursquare.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -35,6 +34,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> JUNGLE_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "jungle_tools"));
     public static final TagKey<Item> BAMBOO_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "bamboo_tools"));
     public static final TagKey<Item> DARK_OAK_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "dark_oak_tools"));
+
+    public static final TagKey<Item> WOODEN_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "wooden_tools"));
 
 
     public static final TagKey<Item> REPAIRS_CHERRY_TOOLS = TagKey.of(
@@ -196,6 +197,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DARK_OAK_SHOVEL)
                 .add(ModItems.DARK_OAK_HOE);
 
+        valueLookupBuilder(ModItemTagProvider.WOODEN_TOOLS)
+                .add(Items.WOODEN_SWORD)
+                .add(Items.WOODEN_PICKAXE)
+                .add(Items.WOODEN_AXE)
+                .add(Items.WOODEN_SHOVEL)
+                .add(Items.WOODEN_HOE);
+
 
         valueLookupBuilder(ModItemTagProvider.REPAIRS_CHERRY_TOOLS)
                 .add(Items.CHERRY_PLANKS)
@@ -296,6 +304,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CRIMSON_AXE)
                 .add(ModItems.BAMBOO_AXE)
                 .add(ModItems.DARK_OAK_AXE);
+        valueLookupBuilder(ItemTags.PICKAXES)
+                .add(ModItems.CHERRY_PICKAXE)
+                .add(ModItems.MANGROVE_PICKAXE)
+                .add(ModItems.SPRUCE_PICKAXE)
+                .add(ModItems.BIRCH_PICKAXE)
+                .add(ModItems.ACACIA_PICKAXE)
+                .add(ModItems.JUNGLE_PICKAXE)
+                .add(ModItems.WARPED_PICKAXE)
+                .add(ModItems.CRIMSON_PICKAXE)
+                .add(ModItems.BAMBOO_PICKAXE)
+                .add(ModItems.DARK_OAK_PICKAXE);
         valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
                 .add(ModItems.CHERRY_PICKAXE)
                 .add(ModItems.MANGROVE_PICKAXE)

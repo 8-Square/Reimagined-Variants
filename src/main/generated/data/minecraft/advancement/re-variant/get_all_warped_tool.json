@@ -41,9 +41,8 @@
     }
   },
   "display": {
-    "description": "You crafted all warped tools, Take a hidden achievement",
+    "description": "Alright Speedrunner *eye roll*",
     "frame": "goal",
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "re-variant:warped_pickaxe"

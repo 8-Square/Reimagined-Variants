@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:re-variant/get_wood_variant_tool",
+  "criteria": {
+    "got_regular_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#re-variant:wooden_tools"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Out of all the wood types you chose oak...",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:wooden_sword"
+    },
+    "title": "Plain & Unlucky"
+  },
+  "requirements": [
+    [
+      "got_regular_tool"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

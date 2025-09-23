@@ -41,14 +41,13 @@
     }
   },
   "display": {
-    "description": "You crafted all acacia tools, Take a hidden achievement",
+    "description": "You just took down your only tree just for a few wooden tools",
     "frame": "goal",
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "re-variant:acacia_pickaxe"
     },
-    "title": "Barking Up The Wrong Tree"
+    "title": "No Shade Here"
   },
   "requirements": [
     [

@@ -41,9 +41,8 @@
     }
   },
   "display": {
-    "description": "You crafted all crimson tools, Take a hidden achievement",
+    "description": "",
     "frame": "goal",
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "re-variant:crimson_pickaxe"

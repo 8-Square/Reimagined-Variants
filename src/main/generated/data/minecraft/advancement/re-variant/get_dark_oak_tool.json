@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:re-variant/get_wood_variant_tool",
   "criteria": {
-    "got_jungle_biome": {
+    "got_dark_oak_biome": {
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biomes": "#re-variant:jungle_biomes"
+                "biomes": "#re-variant:dark_oak_biomes"
               }
             }
           }
@@ -17,11 +17,11 @@
       },
       "trigger": "minecraft:location"
     },
-    "got_jungle_tool": {
+    "got_dark_oak_tool": {
       "conditions": {
         "items": [
           {
-            "items": "#re-variant:jungle_tools"
+            "items": "#re-variant:dark_oak_tools"
           }
         ]
       },
@@ -29,19 +29,19 @@
     }
   },
   "display": {
-    "description": "We've got tools and games",
+    "description": "I- I- i d-d-don't like the dark o-oak",
     "icon": {
       "count": 1,
-      "id": "re-variant:jungle_sword"
+      "id": "re-variant:crimson_sword"
     },
-    "title": "Welcome To The Jungle!"
+    "title": "Dark & Spooky"
   },
   "requirements": [
     [
-      "got_jungle_tool"
+      "got_dark_oak_tool"
     ],
     [
-      "got_jungle_biome"
+      "got_dark_oak_biome"
     ]
   ],
   "sends_telemetry_event": true

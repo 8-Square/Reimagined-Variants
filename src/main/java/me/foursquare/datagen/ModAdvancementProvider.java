@@ -1,38 +1,32 @@
 package me.foursquare.datagen;
 
-import com.mojang.datafixers.types.templates.Tag;
 import me.foursquare.ReimaginedVariants;
-import me.foursquare.ReimaginedVariantsDataGenerator;
 import me.foursquare.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.AdvancementRewards;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.predicate.entity.LocationPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.entry.RegistryEntryList;
-import net.minecraft.registry.tag.BiomeTags;
-import net.minecraft.registry.tag.TagGroupLoader;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 
-import javax.swing.text.html.HTML;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class ModAdvancementProvider extends FabricAdvancementProvider {
     public ModAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
@@ -51,7 +45,10 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         final RegistryEntryList.Named<Biome> crimson = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.CRIMSON_BIOMES);
         final RegistryEntryList.Named<Biome> jungle = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.JUNGLE_BIOMES);
         final RegistryEntryList.Named<Biome> acacia = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.ACACIA_BIOMES);
+        final RegistryEntryList.Named<Biome> dark_oak = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.DARK_OAK_BIOMES);
+        final RegistryEntryList.Named<Biome> bamboo = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.BAMBOO_BIOMES);
 
+// <editor-fold desc="OVERALL ADVANCEMENTS">
         AdvancementEntry getCustomWoodVariant = Advancement.Builder.create()
                 .display(
                         ModItems.CRIMSON_AXE,
@@ -67,6 +64,76 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.WOODEN_VARIANT_TOOLS).build()
                 ))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_wood_variant_tool");
+
+        AdvancementEntry getAllCustomWoodVariant = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        Items.NETHER_STAR,
+                        Text.literal("Reimagined Dedication!"),
+                        Text.literal("Craft EVERY SINGLE Wooden Tool Variation"),
+                        Identifier.of(ReimaginedVariants.MOD_ID, "gui/advancement/cherry"),
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_wood_variant_tool", InventoryChangedCriterion.Conditions.items(
+                        //<editor-fold desc="ALL TOOLS">
+                        ModItems.CHERRY_SWORD,
+                        ModItems.CHERRY_AXE,
+                        ModItems.CHERRY_PICKAXE,
+                        ModItems.CHERRY_SHOVEL,
+                        ModItems.CHERRY_HOE,
+                        ModItems.MANGROVE_SWORD,
+                        ModItems.MANGROVE_AXE,
+                        ModItems.MANGROVE_PICKAXE,
+                        ModItems.MANGROVE_SHOVEL,
+                        ModItems.MANGROVE_HOE,
+                        ModItems.SPRUCE_SWORD,
+                        ModItems.SPRUCE_AXE,
+                        ModItems.SPRUCE_PICKAXE,
+                        ModItems.SPRUCE_SHOVEL,
+                        ModItems.SPRUCE_HOE,
+                        ModItems.BIRCH_SWORD,
+                        ModItems.BIRCH_AXE,
+                        ModItems.BIRCH_PICKAXE,
+                        ModItems.BIRCH_SHOVEL,
+                        ModItems.BIRCH_HOE,
+                        ModItems.ACACIA_SWORD,
+                        ModItems.ACACIA_AXE,
+                        ModItems.ACACIA_PICKAXE,
+                        ModItems.ACACIA_SHOVEL,
+                        ModItems.ACACIA_HOE,
+                        ModItems.JUNGLE_SWORD,
+                        ModItems.JUNGLE_AXE,
+                        ModItems.JUNGLE_PICKAXE,
+                        ModItems.JUNGLE_SHOVEL,
+                        ModItems.JUNGLE_HOE,
+                        ModItems.WARPED_SWORD,
+                        ModItems.WARPED_AXE,
+                        ModItems.WARPED_PICKAXE,
+                        ModItems.WARPED_SHOVEL,
+                        ModItems.WARPED_HOE,
+                        ModItems.CRIMSON_SWORD,
+                        ModItems.CRIMSON_AXE,
+                        ModItems.CRIMSON_PICKAXE,
+                        ModItems.CRIMSON_SHOVEL,
+                        ModItems.CRIMSON_HOE,
+                        ModItems.BAMBOO_SWORD,
+                        ModItems.BAMBOO_AXE,
+                        ModItems.BAMBOO_PICKAXE,
+                        ModItems.BAMBOO_SHOVEL,
+                        ModItems.BAMBOO_HOE,
+                        ModItems.DARK_OAK_SWORD,
+                        ModItems.DARK_OAK_AXE,
+                        ModItems.DARK_OAK_PICKAXE,
+                        ModItems.DARK_OAK_SHOVEL,
+                        ModItems.DARK_OAK_HOE
+                        //</editor-fold>
+                ))
+                .rewards(AdvancementRewards.Builder.experience(920))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_wood_variant_tool");
+//</editor-fold>
 
 // <editor-fold desc="CHERRY ADVANCEMENTS">
         AdvancementEntry getCherryTool = Advancement.Builder.create()
@@ -229,7 +296,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_birch_tool");
 
         AdvancementEntry getAllBirchTool = Advancement.Builder.create()
-                .parent(getSpruceTool)
+                .parent(getBirchTool)
                 .display(
                         ModItems.BIRCH_PICKAXE,
                         Text.literal("Barking Up The Wrong Tree"),
@@ -279,13 +346,13 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .parent(getAcaciaTool)
                 .display(
                         ModItems.ACACIA_PICKAXE,
-                        Text.literal("Barking Up The Wrong Tree"),
-                        Text.literal("You crafted all acacia tools, Take a hidden achievement"),
+                        Text.literal("No Shade Here"),
+                        Text.literal("You just took down your only tree just for a few wooden tools"),
                         null,
                         AdvancementFrame.GOAL,
                         true,
                         true,
-                        true
+                        false
                 )
                 .criterion("got_all_acacia_tool", InventoryChangedCriterion.Conditions.items(
                         ModItems.ACACIA_SWORD,
@@ -306,8 +373,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .parent(getCustomWoodVariant)
                 .display(
                         ModItems.JUNGLE_SWORD,
-                        Text.literal("Jungle Tools"),
-                        Text.literal(""),
+                        Text.literal("Welcome To The Jungle!"),
+                        Text.literal("We've got tools and games"),
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -332,7 +399,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         AdvancementFrame.GOAL,
                         true,
                         true,
-                        true
+                        false
                 )
                 .criterion("got_all_jungle_tool", InventoryChangedCriterion.Conditions.items(
                         ModItems.JUNGLE_SWORD,
@@ -354,7 +421,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         ModItems.WARPED_SWORD,
                         Text.literal("Warped Your Way"),
-                        Text.literal("Never expected someone to craft this"),
+                        Text.literal(""),
                         null,
                         AdvancementFrame.TASK,
                         true,
@@ -374,12 +441,12 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         ModItems.WARPED_PICKAXE,
                         Text.literal("Warped Ambitions"),
-                        Text.literal("You crafted all warped tools, Take a hidden achievement"),
+                        Text.literal("Alright Speedrunner *eye roll*"),
                         null,
                         AdvancementFrame.GOAL,
                         true,
                         true,
-                        true
+                        false
                 )
                 .criterion("got_all_warped_tool", InventoryChangedCriterion.Conditions.items(
                         ModItems.WARPED_SWORD,
@@ -421,12 +488,12 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         ModItems.CRIMSON_PICKAXE,
                         Text.literal("Crimson Vengeance"),
-                        Text.literal("You crafted all crimson tools, Take a hidden achievement"),
+                        Text.literal(""),
                         null,
                         AdvancementFrame.GOAL,
                         true,
                         true,
-                        true
+                        false
                 )
                 .criterion("got_all_crimson_tool", InventoryChangedCriterion.Conditions.items(
                         ModItems.CRIMSON_SWORD,
@@ -441,5 +508,142 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         )))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_crimson_tool");
 // </editor-fold>
+
+// <editor-fold desc="BAMBOO ADVANCEMENTS">
+        AdvancementEntry getBambooTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.BAMBOO_SWORD,
+                        Text.literal("Sticks & Stones May Break My Bones"),
+                        Text.literal("Craft A Bamboo Tool"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_bamboo_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.BAMBOO_TOOLS).build()
+                ))
+                .criterion("got_bamboo_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(bamboo)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_bamboo_tool");
+
+        AdvancementEntry getAllBambooTool = Advancement.Builder.create()
+                .parent(getBambooTool)
+                .display(
+                        ModItems.BAMBOO_PICKAXE,
+                        Text.literal("Bamboo Dynasty"),
+                        Text.literal("Guess you really like pandas"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_all_bamboo_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.BAMBOO_SWORD,
+                        ModItems.BAMBOO_PICKAXE,
+                        ModItems.BAMBOO_AXE,
+                        ModItems.BAMBOO_SHOVEL,
+                        ModItems.BAMBOO_HOE
+                ))
+                .criterion("got_bamboo_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(bamboo)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_bamboo_tool");
+// </editor-fold>
+
+// <editor-fold desc="DARK OAK ADVANCEMENTS">
+        AdvancementEntry getDarkOakTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.CRIMSON_SWORD,
+                        Text.literal("Dark & Spooky"),
+                        Text.literal("I- I- i d-d-don't like the dark o-oak"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_dark_oak_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.DARK_OAK_TOOLS).build()
+                ))
+                .criterion("got_dark_oak_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(dark_oak)
+                        )))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_dark_oak_tool");
+
+        AdvancementEntry getAllDarkOakTool = Advancement.Builder.create()
+                .parent(getDarkOakTool)
+                .display(
+                        ModItems.CRIMSON_PICKAXE,
+                        Text.literal("The Dark One"),
+                        Text.literal("It takes a bit of dedication to get here and do all this"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_all_dark_oak_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.DARK_OAK_SWORD,
+                        ModItems.DARK_OAK_PICKAXE,
+                        ModItems.DARK_OAK_AXE,
+                        ModItems.DARK_OAK_SHOVEL,
+                        ModItems.DARK_OAK_HOE
+                ))
+                .criterion("got_dark_oak_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(dark_oak)
+                        )))
+                .rewards(AdvancementRewards.Builder.experience(100))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_dark_oak_tool");
+// </editor-fold>
+
+// <editor-fold desc="REGULAR ADVANCEMENTS">
+        AdvancementEntry getRegularTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        Items.WOODEN_SWORD,
+                        Text.literal("Plain & Unlucky"),
+                        Text.literal("Out of all the wood types you chose oak..."),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_regular_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.WOODEN_TOOLS).build()
+                ))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_regular_tool");
+
+        AdvancementEntry getAllRegularTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        Items.WOODEN_PICKAXE,
+                        Text.literal("Extra Unordinary"),
+                        Text.literal("Really... this has to be on purpose..."),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        true
+                )
+                .criterion("got_all_regular_tool", InventoryChangedCriterion.Conditions.items(
+                        Items.WOODEN_SWORD,
+                        Items.WOODEN_AXE,
+                        Items.WOODEN_PICKAXE,
+                        Items.WOODEN_HOE,
+                        Items.WOODEN_SHOVEL
+                ))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_regular_tool");
+
+// </editor-fold>
+
     }
 }

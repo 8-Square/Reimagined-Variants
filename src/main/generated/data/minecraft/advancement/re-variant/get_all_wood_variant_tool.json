@@ -1,0 +1,181 @@
+{
+  "parent": "minecraft:re-variant/get_wood_variant_tool",
+  "criteria": {
+    "got_all_wood_variant_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "re-variant:cherry_sword"
+          },
+          {
+            "items": "re-variant:cherry_axe"
+          },
+          {
+            "items": "re-variant:cherry_pickaxe"
+          },
+          {
+            "items": "re-variant:cherry_shovel"
+          },
+          {
+            "items": "re-variant:cherry_hoe"
+          },
+          {
+            "items": "re-variant:mangrove_sword"
+          },
+          {
+            "items": "re-variant:mangrove_axe"
+          },
+          {
+            "items": "re-variant:mangrove_pickaxe"
+          },
+          {
+            "items": "re-variant:mangrove_shovel"
+          },
+          {
+            "items": "re-variant:mangrove_hoe"
+          },
+          {
+            "items": "re-variant:spruce_sword"
+          },
+          {
+            "items": "re-variant:spruce_axe"
+          },
+          {
+            "items": "re-variant:spruce_pickaxe"
+          },
+          {
+            "items": "re-variant:spruce_shovel"
+          },
+          {
+            "items": "re-variant:spruce_hoe"
+          },
+          {
+            "items": "re-variant:birch_sword"
+          },
+          {
+            "items": "re-variant:birch_axe"
+          },
+          {
+            "items": "re-variant:birch_pickaxe"
+          },
+          {
+            "items": "re-variant:birch_shovel"
+          },
+          {
+            "items": "re-variant:birch_hoe"
+          },
+          {
+            "items": "re-variant:acacia_sword"
+          },
+          {
+            "items": "re-variant:acacia_axe"
+          },
+          {
+            "items": "re-variant:acacia_pickaxe"
+          },
+          {
+            "items": "re-variant:acacia_shovel"
+          },
+          {
+            "items": "re-variant:acacia_hoe"
+          },
+          {
+            "items": "re-variant:jungle_sword"
+          },
+          {
+            "items": "re-variant:jungle_axe"
+          },
+          {
+            "items": "re-variant:jungle_pickaxe"
+          },
+          {
+            "items": "re-variant:jungle_shovel"
+          },
+          {
+            "items": "re-variant:jungle_hoe"
+          },
+          {
+            "items": "re-variant:warped_sword"
+          },
+          {
+            "items": "re-variant:warped_axe"
+          },
+          {
+            "items": "re-variant:warped_pickaxe"
+          },
+          {
+            "items": "re-variant:warped_shovel"
+          },
+          {
+            "items": "re-variant:warped_hoe"
+          },
+          {
+            "items": "re-variant:crimson_sword"
+          },
+          {
+            "items": "re-variant:crimson_axe"
+          },
+          {
+            "items": "re-variant:crimson_pickaxe"
+          },
+          {
+            "items": "re-variant:crimson_shovel"
+          },
+          {
+            "items": "re-variant:crimson_hoe"
+          },
+          {
+            "items": "re-variant:bamboo_sword"
+          },
+          {
+            "items": "re-variant:bamboo_axe"
+          },
+          {
+            "items": "re-variant:bamboo_pickaxe"
+          },
+          {
+            "items": "re-variant:bamboo_shovel"
+          },
+          {
+            "items": "re-variant:bamboo_hoe"
+          },
+          {
+            "items": "re-variant:dark_oak_sword"
+          },
+          {
+            "items": "re-variant:dark_oak_axe"
+          },
+          {
+            "items": "re-variant:dark_oak_pickaxe"
+          },
+          {
+            "items": "re-variant:dark_oak_shovel"
+          },
+          {
+            "items": "re-variant:dark_oak_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "re-variant:gui/advancement/cherry",
+    "description": "Craft EVERY SINGLE Wooden Tool Variation",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "minecraft:nether_star"
+    },
+    "title": "Reimagined Dedication!"
+  },
+  "requirements": [
+    [
+      "got_all_wood_variant_tool"
+    ]
+  ],
+  "rewards": {
+    "experience": 920
+  },
+  "sends_telemetry_event": true
+}

@@ -3,6 +3,7 @@
 36538de032db11ba6d0dc5184b6893f50c9cd3dd data/minecraft/tags/item/enchantable/mining.json
 153fb5db2f715f91825e9296398573e20ba0efbb data/minecraft/tags/item/enchantable/sword.json
 5fa6e1d6253cc3b06dabf96fc16a13fe616f4c57 data/minecraft/tags/item/hoes.json
+36538de032db11ba6d0dc5184b6893f50c9cd3dd data/minecraft/tags/item/pickaxes.json
 bfc85b1d8673afe84d40cdc0aacc64d95680928e data/minecraft/tags/item/shovels.json
 0ea47eff7547b86b887f3559186276515865c65f data/minecraft/tags/item/swords.json
 ac2aed8f4d5b9101638c388b34d5942d787ebbc8 data/re-variant/tags/item/bamboo_tools.json
@@ -24,4 +25,5 @@ aaaebc581dbef1959d15175b0ceee3aae94a62f5 data/re-variant/tags/item/repairs_cherr
 bbf8a36f40f49de33ac4feaf5b77eee02c1bbd1e data/re-variant/tags/item/repairs_warped_tools.json
 b5e92ec702a032086ebe34757ee53627702a43ea data/re-variant/tags/item/spruce_tools.json
 070cef297baf1c563cf91ce03ef6ce36589d1bc7 data/re-variant/tags/item/warped_tools.json
+66f2b6ba74b8d637e92349c607239b81e13ba3a9 data/re-variant/tags/item/wooden_tools.json
 96f87ab91d1f1346dfa18ab1247b73f703b9c071 data/re-variant/tags/item/wooden_variant_tools.json

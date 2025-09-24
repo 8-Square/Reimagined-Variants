@@ -1,5 +1,6 @@
 package me.foursquare.buff;
 
+import me.foursquare.datagen.ModBiomeTagProvider;
 import me.foursquare.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -16,10 +17,7 @@ public class AcaciaBuffs {
 
     private static void ApplyBuff(ServerPlayerEntity player) {
         RegistryEntry<Biome> biome = player.getWorld().getBiome(player.getBlockPos());
-        boolean InsideSavanna =
-                biome.matchesKey(BiomeKeys.SAVANNA) ||
-                biome.matchesKey(BiomeKeys.SAVANNA_PLATEAU) ||
-                biome.matchesKey(BiomeKeys.WINDSWEPT_FOREST);
+        boolean InsideSavanna = biome.isIn(ModBiomeTagProvider.ACACIA_BIOMES);
         boolean HasTagItem = player.getInventory().contains(ModItemTagProvider.ACACIA_TOOLS);
 
 

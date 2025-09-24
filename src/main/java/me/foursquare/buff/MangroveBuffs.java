@@ -1,11 +1,9 @@
 package me.foursquare.buff;
 
 import me.foursquare.datagen.ModItemTagProvider;
-import me.foursquare.item.ModItems;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.biome.Biome;

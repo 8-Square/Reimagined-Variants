@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -369,7 +368,7 @@ public class ModItems {
             Item::new,
             new Item.Settings().sword(
                     ModToolMaterial.BAMBOO_TOOL_MATERIAL,
-                    3.0f,
+                    2.6f,
                     -2.4f
             ));
     public static final Item BAMBOO_PICKAXE = register(
@@ -377,7 +376,7 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(
                     ModToolMaterial.BAMBOO_TOOL_MATERIAL,
-                    1.0f,
+                    0.6f,
                     -2.8f
             ));
     public static final Item BAMBOO_AXE = register(
@@ -385,7 +384,7 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(
                     ModToolMaterial.BAMBOO_TOOL_MATERIAL,
-                    6.0f,
+                    5.6f,
                     -3.2f
             ));
     public static final Item BAMBOO_SHOVEL = register(
@@ -393,7 +392,7 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(
                     ModToolMaterial.BAMBOO_TOOL_MATERIAL,
-                    1.5f,
+                    1.1f,
                     -3.0f
             ));
     public static final Item BAMBOO_HOE = register(
@@ -401,7 +400,7 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(
                     ModToolMaterial.BAMBOO_TOOL_MATERIAL,
-                    0.0f,
+                    -0.4f,
                     -3.0f
             ));
 
@@ -519,9 +518,9 @@ public class ModItems {
             itemGroup.add(ModItems.BAMBOO_SHOVEL);
             itemGroup.add(ModItems.BAMBOO_HOE);
 
-            itemGroup.add(ModItems.DARK_OAK_AXE);
-            itemGroup.add(ModItems.DARK_OAK_PICKAXE);
             itemGroup.add(ModItems.DARK_OAK_SWORD);
+            itemGroup.add(ModItems.DARK_OAK_PICKAXE);
+            itemGroup.add(ModItems.DARK_OAK_AXE);
             itemGroup.add(ModItems.DARK_OAK_SHOVEL);
             itemGroup.add(ModItems.DARK_OAK_HOE);
         });

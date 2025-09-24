@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "re-variant:shovels",
   "category": "equipment",
   "pattern": [
     " C ",

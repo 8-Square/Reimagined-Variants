@@ -9,14 +9,14 @@
   ],
   "key": {
     "C": [
-      "minecraft:crimson_planks"
+      "minecraft:dark_oak_planks"
     ],
     "S": [
       "minecraft:stick"
     ]
   },
   "result": {
-    "id": "re-variant:crimson_pickaxe",
+    "id": "re-variant:dark_oak_pickaxe",
     "count": 1
   }
 }

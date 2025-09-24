@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "re-variant:pickaxes",
+  "group": "re-variant:swords",
   "category": "equipment",
   "pattern": [
-    "CCC",
-    " S ",
+    " C ",
+    " C ",
     " S "
   ],
   "key": {
     "C": [
-      "minecraft:crimson_planks"
+      "minecraft:dark_oak_planks"
     ],
     "S": [
       "minecraft:stick"
     ]
   },
   "result": {
-    "id": "re-variant:crimson_pickaxe",
+    "id": "re-variant:dark_oak_sword",
     "count": 1
   }
 }

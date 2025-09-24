@@ -326,7 +326,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .parent(getCustomWoodVariant)
                 .display(
                         ModItems.ACACIA_SWORD,
-                        Text.literal("Someone Actually Uses Acacia??"),
+                        Text.literal("You really took a tree down for this?"),
                         Text.literal("Never expected someone to craft this"),
                         null,
                         AdvancementFrame.TASK,
@@ -488,7 +488,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .display(
                         ModItems.CRIMSON_PICKAXE,
                         Text.literal("Crimson Vengeance"),
-                        Text.literal(""),
+                        Text.literal("Guess you like: THE NETHER"),
                         null,
                         AdvancementFrame.GOAL,
                         true,
@@ -560,7 +560,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry getDarkOakTool = Advancement.Builder.create()
                 .parent(getCustomWoodVariant)
                 .display(
-                        ModItems.CRIMSON_SWORD,
+                        ModItems.DARK_OAK_SWORD,
                         Text.literal("Dark & Spooky"),
                         Text.literal("I- I- i d-d-don't like the dark o-oak"),
                         null,
@@ -580,7 +580,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry getAllDarkOakTool = Advancement.Builder.create()
                 .parent(getDarkOakTool)
                 .display(
-                        ModItems.CRIMSON_PICKAXE,
+                        ModItems.DARK_OAK_PICKAXE,
                         Text.literal("The Dark One"),
                         Text.literal("It takes a bit of dedication to get here and do all this"),
                         null,
@@ -623,7 +623,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_regular_tool");
 
         AdvancementEntry getAllRegularTool = Advancement.Builder.create()
-                .parent(getCustomWoodVariant)
+                .parent(getRegularTool)
                 .display(
                         Items.WOODEN_PICKAXE,
                         Text.literal("Extra Unordinary"),

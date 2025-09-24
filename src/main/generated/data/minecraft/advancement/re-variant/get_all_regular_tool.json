@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:re-variant/get_wood_variant_tool",
+  "parent": "minecraft:re-variant/get_regular_tool",
   "criteria": {
     "got_all_regular_tool": {
       "conditions": {

@@ -6,6 +6,7 @@
 36538de032db11ba6d0dc5184b6893f50c9cd3dd data/minecraft/tags/item/pickaxes.json
 bfc85b1d8673afe84d40cdc0aacc64d95680928e data/minecraft/tags/item/shovels.json
 0ea47eff7547b86b887f3559186276515865c65f data/minecraft/tags/item/swords.json
+d63d1092839fc143e4b5c64f4b081d89ec448ae1 data/re-variant/tags/item/acacia_tools.json
 ac2aed8f4d5b9101638c388b34d5942d787ebbc8 data/re-variant/tags/item/bamboo_tools.json
 4ee8edc5a300a7f32d807fc48dfb400080872164 data/re-variant/tags/item/birch_tools.json
 e5d078ebab513538ca6e16667cff47bef18a56bc data/re-variant/tags/item/cherry_tools.json

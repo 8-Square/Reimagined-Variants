@@ -155,6 +155,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BIRCH_SHOVEL)
                 .add(ModItems.BIRCH_HOE);
 
+        valueLookupBuilder(ModItemTagProvider.ACACIA_TOOLS)
+                .add(ModItems.ACACIA_SWORD)
+                .add(ModItems.ACACIA_PICKAXE)
+                .add(ModItems.ACACIA_AXE)
+                .add(ModItems.ACACIA_SHOVEL)
+                .add(ModItems.ACACIA_HOE);
+
         valueLookupBuilder(ModItemTagProvider.SPRUCE_TOOLS)
                 .add(ModItems.SPRUCE_SWORD)
                 .add(ModItems.SPRUCE_PICKAXE)

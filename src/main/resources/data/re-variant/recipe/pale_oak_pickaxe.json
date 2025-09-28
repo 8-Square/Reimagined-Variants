@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "re-variant:pickaxes",
+  "category": "equipment",
+  "pattern": [
+    "CCC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "C": [
+      "minecraft:pale_oak_planks"
+    ],
+    "S": [
+      "minecraft:stick"
+    ]
+  },
+  "result": {
+    "id": "re-variant:pale_oak_pickaxe",
+    "count": 1
+  }
+}

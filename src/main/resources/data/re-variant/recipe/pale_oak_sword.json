@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "re-variant:swords",
+  "category": "equipment",
+  "pattern": [
+    " C ",
+    " C ",
+    " S "
+  ],
+  "key": {
+    "C": [
+      "minecraft:pale_oak_planks"
+    ],
+    "S": [
+      "minecraft:stick"
+    ]
+  },
+  "result": {
+    "id": "re-variant:pale_oak_sword",
+    "count": 1
+  }
+}

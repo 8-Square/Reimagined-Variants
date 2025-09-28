@@ -34,6 +34,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> JUNGLE_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "jungle_tools"));
     public static final TagKey<Item> BAMBOO_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "bamboo_tools"));
     public static final TagKey<Item> DARK_OAK_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "dark_oak_tools"));
+    public static final TagKey<Item> PALE_OAK_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "pale_oak_tools"));
 
     public static final TagKey<Item> WOODEN_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of(ReimaginedVariants.MOD_ID, "wooden_tools"));
 
@@ -77,6 +78,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> REPAIRS_DARK_OAK_TOOLS = TagKey.of(
             Registries.ITEM.getKey(),
             Identifier.of(ReimaginedVariants.MOD_ID, "repairs_dark_oak_tools"
+            ));
+    public static final TagKey<Item> REPAIRS_PALE_OAK_TOOLS = TagKey.of(
+            Registries.ITEM.getKey(),
+            Identifier.of(ReimaginedVariants.MOD_ID, "repairs_pale_oak_tools"
             ));
 
 
@@ -132,7 +137,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DARK_OAK_AXE)
                 .add(ModItems.DARK_OAK_PICKAXE)
                 .add(ModItems.DARK_OAK_SHOVEL)
-                .add(ModItems.DARK_OAK_HOE);
+                .add(ModItems.DARK_OAK_HOE)
+                .add(ModItems.PALE_OAK_SWORD)
+                .add(ModItems.PALE_OAK_AXE)
+                .add(ModItems.PALE_OAK_PICKAXE)
+                .add(ModItems.PALE_OAK_SHOVEL)
+                .add(ModItems.PALE_OAK_HOE);
 
         valueLookupBuilder(ModItemTagProvider.CHERRY_TOOLS)
                 .add(ModItems.CHERRY_PICKAXE)
@@ -211,6 +221,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.WOODEN_SHOVEL)
                 .add(Items.WOODEN_HOE);
 
+        valueLookupBuilder(ModItemTagProvider.PALE_OAK_TOOLS)
+                .add(ModItems.PALE_OAK_PICKAXE)
+                .add(ModItems.PALE_OAK_SWORD)
+                .add(ModItems.PALE_OAK_AXE)
+                .add(ModItems.PALE_OAK_SHOVEL)
+                .add(ModItems.PALE_OAK_HOE);
+
 
         valueLookupBuilder(ModItemTagProvider.REPAIRS_CHERRY_TOOLS)
                 .add(Items.CHERRY_PLANKS)
@@ -276,6 +293,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.STRIPPED_DARK_OAK_LOG)
                 .add(Items.STRIPPED_DARK_OAK_WOOD)
                 .add(Items.DARK_OAK_WOOD);
+        valueLookupBuilder(ModItemTagProvider.REPAIRS_PALE_OAK_TOOLS)
+                .add(Items.PALE_OAK_PLANKS)
+                .add(Items.PALE_OAK_LOG)
+                .add(Items.STRIPPED_PALE_OAK_LOG)
+                .add(Items.STRIPPED_PALE_OAK_WOOD)
+                .add(Items.PALE_OAK_WOOD);
 
 
         valueLookupBuilder(ItemTags.SWORD_ENCHANTABLE)
@@ -288,6 +311,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_SWORD)
                 .add(ModItems.CRIMSON_SWORD)
                 .add(ModItems.DARK_OAK_SWORD)
+                .add(ModItems.PALE_OAK_SWORD)
                 .add(ModItems.BAMBOO_SWORD);
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.CHERRY_SWORD)
@@ -299,6 +323,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_SWORD)
                 .add(ModItems.CRIMSON_SWORD)
                 .add(ModItems.BAMBOO_SWORD)
+                .add(ModItems.PALE_OAK_SWORD)
                 .add(ModItems.DARK_OAK_SWORD);
         valueLookupBuilder(ItemTags.AXES)
                 .add(ModItems.CHERRY_AXE)
@@ -310,7 +335,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_AXE)
                 .add(ModItems.CRIMSON_AXE)
                 .add(ModItems.BAMBOO_AXE)
-                .add(ModItems.DARK_OAK_AXE);
+                .add(ModItems.DARK_OAK_AXE)
+                .add(ModItems.PALE_OAK_AXE);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.CHERRY_PICKAXE)
                 .add(ModItems.MANGROVE_PICKAXE)
@@ -321,7 +347,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_PICKAXE)
                 .add(ModItems.CRIMSON_PICKAXE)
                 .add(ModItems.BAMBOO_PICKAXE)
-                .add(ModItems.DARK_OAK_PICKAXE);
+                .add(ModItems.DARK_OAK_PICKAXE)
+                .add(ModItems.PALE_OAK_PICKAXE);
         valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
                 .add(ModItems.CHERRY_PICKAXE)
                 .add(ModItems.MANGROVE_PICKAXE)
@@ -332,7 +359,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_PICKAXE)
                 .add(ModItems.CRIMSON_PICKAXE)
                 .add(ModItems.BAMBOO_PICKAXE)
-                .add(ModItems.DARK_OAK_PICKAXE);
+                .add(ModItems.DARK_OAK_PICKAXE)
+                .add(ModItems.PALE_OAK_PICKAXE);
         valueLookupBuilder(ItemTags.HOES)
                 .add(ModItems.CHERRY_HOE)
                 .add(ModItems.MANGROVE_HOE)
@@ -343,7 +371,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_HOE)
                 .add(ModItems.CRIMSON_HOE)
                 .add(ModItems.BAMBOO_HOE)
-                .add(ModItems.DARK_OAK_HOE);
+                .add(ModItems.DARK_OAK_HOE)
+                .add(ModItems.PALE_OAK_HOE);
         valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.CHERRY_SHOVEL)
                 .add(ModItems.MANGROVE_SHOVEL)
@@ -354,7 +383,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WARPED_SHOVEL)
                 .add(ModItems.CRIMSON_SHOVEL)
                 .add(ModItems.BAMBOO_SHOVEL)
-                .add(ModItems.DARK_OAK_SHOVEL);
+                .add(ModItems.DARK_OAK_SHOVEL)
+                .add(ModItems.PALE_OAK_SHOVEL);
     }
 
 

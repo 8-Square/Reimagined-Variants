@@ -1,0 +1,51 @@
+{
+  "parent": "minecraft:re-variant/get_wood_variant_tool",
+  "criteria": {
+    "got_pale_oak_biome": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "#re-variant:pale_oak_biomes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    },
+    "got_pale_oak_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#re-variant:pale_oak_tools"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": "Craft a Pale Oak Tool",
+    "icon": {
+      "count": 1,
+      "id": "re-variant:pale_oak_sword"
+    },
+    "title": "Pale as Bone"
+  },
+  "requirements": [
+    [
+      "got_pale_oak_tool"
+    ],
+    [
+      "got_pale_oak_biome"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

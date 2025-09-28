@@ -88,5 +88,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DARK_OAK_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DARK_OAK_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DARK_OAK_HOE, Models.HANDHELD);
+
+        // PALE OAK TOOLS
+        itemModelGenerator.register(ModItems.PALE_OAK_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PALE_OAK_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PALE_OAK_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PALE_OAK_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PALE_OAK_HOE, Models.HANDHELD);
+
     }
 }

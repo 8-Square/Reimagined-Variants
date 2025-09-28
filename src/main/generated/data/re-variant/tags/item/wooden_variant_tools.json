@@ -49,6 +49,11 @@
     "re-variant:dark_oak_axe",
     "re-variant:dark_oak_pickaxe",
     "re-variant:dark_oak_shovel",
-    "re-variant:dark_oak_hoe"
+    "re-variant:dark_oak_hoe",
+    "re-variant:pale_oak_sword",
+    "re-variant:pale_oak_axe",
+    "re-variant:pale_oak_pickaxe",
+    "re-variant:pale_oak_shovel",
+    "re-variant:pale_oak_hoe"
   ]
 }

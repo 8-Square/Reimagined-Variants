@@ -46,6 +46,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         final RegistryEntryList.Named<Biome> jungle = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.JUNGLE_BIOMES);
         final RegistryEntryList.Named<Biome> acacia = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.ACACIA_BIOMES);
         final RegistryEntryList.Named<Biome> dark_oak = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.DARK_OAK_BIOMES);
+        final RegistryEntryList.Named<Biome> pale_oak = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.PALE_OAK_BIOMES);
         final RegistryEntryList.Named<Biome> bamboo = wrapperLookup.getOrThrow(RegistryKeys.BIOME).getOrThrow(ModBiomeTagProvider.BAMBOO_BIOMES);
 
 // <editor-fold desc="OVERALL ADVANCEMENTS">
@@ -602,6 +603,55 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         )))
                 .rewards(AdvancementRewards.Builder.experience(100))
                 .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_dark_oak_tool");
+// </editor-fold>
+
+// <editor-fold desc="PALE OAK ADVANCEMENTS">
+        AdvancementEntry getPaleOakTool = Advancement.Builder.create()
+                .parent(getCustomWoodVariant)
+                .display(
+                        ModItems.PALE_OAK_SWORD,
+                        Text.literal("Pale as Bone"),
+                        Text.literal("Craft a Pale Oak Tool"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_pale_oak_tool", InventoryChangedCriterion.Conditions.items(
+                        ItemPredicate.Builder.create().tag(itemLookup, ModItemTagProvider.PALE_OAK_TOOLS).build()
+                ))
+                .criterion("got_pale_oak_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(LocationPredicate.Builder.create().biome(pale_oak)
+                        )))
+                .rewards(AdvancementRewards.Builder.experience(100))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_pale_oak_tool");
+
+        AdvancementEntry getAllPaleOakTool = Advancement.Builder.create()
+                .parent(getPaleOakTool)
+                .display(
+                        ModItems.PALE_OAK_PICKAXE,
+                        Text.literal("Pale & Stale"),
+                        Text.literal("Either you're really lucky or you used creative"),
+                        null,
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        false
+                )
+                .criterion("got_all_pale_oak_tool", InventoryChangedCriterion.Conditions.items(
+                        ModItems.PALE_OAK_SWORD,
+                        ModItems.PALE_OAK_PICKAXE,
+                        ModItems.PALE_OAK_AXE,
+                        ModItems.PALE_OAK_SHOVEL,
+                        ModItems.PALE_OAK_HOE
+                ))
+                .criterion("got_pale_oak_biome", TickCriterion.Conditions.createLocation(
+                        EntityPredicate.Builder.create().location(
+                                LocationPredicate.Builder.create().biome(pale_oak)
+                        )))
+                .rewards(AdvancementRewards.Builder.experience(200))
+                .build(consumer, ReimaginedVariants.MOD_ID + "/get_all_pale_oak_tool");
 // </editor-fold>
 
 // <editor-fold desc="REGULAR ADVANCEMENTS">

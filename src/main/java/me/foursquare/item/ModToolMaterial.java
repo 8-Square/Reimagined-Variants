@@ -85,4 +85,12 @@ public class ModToolMaterial {
             15,
             ModItemTagProvider.REPAIRS_DARK_OAK_TOOLS
     );
+    public static final ToolMaterial PALE_OAK_TOOL_MATERIAL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_WOODEN_TOOL,
+            60,
+            2.0f,
+            0.1f,
+            15,
+            ModItemTagProvider.REPAIRS_PALE_OAK_TOOLS
+    );
 }

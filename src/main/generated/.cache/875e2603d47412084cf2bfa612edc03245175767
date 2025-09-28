@@ -39,6 +39,11 @@ c24fa59a8260228c4c4f4698110acee844dcde0c assets/re-variant/items/jungle_shovel.j
 eabc40b380183e136ff414a0cc3f23200b08360b assets/re-variant/items/mangrove_pickaxe.json
 abd2bb97c90ba3f3f976ad023474ea80aedaaacb assets/re-variant/items/mangrove_shovel.json
 9912fe1de2929a07b5977cc751c4a776b67777ae assets/re-variant/items/mangrove_sword.json
+4cac008f03208be9fbd3cb92006f24a3956e303a assets/re-variant/items/pale_oak_axe.json
+cb99ed0cfb9656475f52172415ca5f32c59e8447 assets/re-variant/items/pale_oak_hoe.json
+34273cbf1e714fb4f7f30799efe06a018cd2b95b assets/re-variant/items/pale_oak_pickaxe.json
+b0cdf6b1ca9cfab4f3bac5d9b67c70bf6e07f282 assets/re-variant/items/pale_oak_shovel.json
+dd3ee3c1bbc4a0b3bed51516a9b31987338260bb assets/re-variant/items/pale_oak_sword.json
 2f928548caabeb3784d48f18ba6bb7869ba4f00b assets/re-variant/items/spruce_axe.json
 a45492c90391c01ece45b7475106c51d476d3d79 assets/re-variant/items/spruce_hoe.json
 9d57d27ff396f2cf4e4b03cc0cb78205472a2cbd assets/re-variant/items/spruce_pickaxe.json
@@ -89,6 +94,11 @@ c503ed8c3f3a3a0b6116f2e699250d8c801816b8 assets/re-variant/models/item/jungle_sh
 6f966e38419b48742fa1f72980035b066ace563d assets/re-variant/models/item/mangrove_pickaxe.json
 24980577063932b3b9061bdf762a72238a60b7ae assets/re-variant/models/item/mangrove_shovel.json
 7b87e30bff7a96ede9f85567a55c958f17c22732 assets/re-variant/models/item/mangrove_sword.json
+5dd65c2f09ed08932d396aad97923a1747e40149 assets/re-variant/models/item/pale_oak_axe.json
+2992865f0e7a4470810627ebe832438fddbf4770 assets/re-variant/models/item/pale_oak_hoe.json
+f563c6f13590fac8022c1635ce31555f14ca4a50 assets/re-variant/models/item/pale_oak_pickaxe.json
+ce2b265c56e8ddf1eced9acb656cf3c99a716b9f assets/re-variant/models/item/pale_oak_shovel.json
+4b7e9b8c97e5e9c7b643f4389750be9dfa82a69d assets/re-variant/models/item/pale_oak_sword.json
 e058535b8a680a21af0c6c6972112619982cacda assets/re-variant/models/item/spruce_axe.json
 1a6abbc42c3ac24fa975af08a2449cffb2214814 assets/re-variant/models/item/spruce_hoe.json
 7da6251f3328c5c98ca3e153a52980fc0fb4fe4d assets/re-variant/models/item/spruce_pickaxe.json

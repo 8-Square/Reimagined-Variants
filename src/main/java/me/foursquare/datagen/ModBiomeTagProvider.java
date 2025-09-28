@@ -23,6 +23,7 @@ public class ModBiomeTagProvider extends FabricTagProvider.FabricValueLookupTagP
     public static final TagKey<Biome> CRIMSON_BIOMES = TagKey.of(RegistryKeys.BIOME, Identifier.of(ReimaginedVariants.MOD_ID, "crimson_biomes"));
     public static final TagKey<Biome> DARK_OAK_BIOMES = TagKey.of(RegistryKeys.BIOME, Identifier.of(ReimaginedVariants.MOD_ID, "dark_oak_biomes"));
     public static final TagKey<Biome> BAMBOO_BIOMES = TagKey.of(RegistryKeys.BIOME, Identifier.of(ReimaginedVariants.MOD_ID, "bamboo_biomes"));
+    public static final TagKey<Biome> PALE_OAK_BIOMES = TagKey.of(RegistryKeys.BIOME, Identifier.of(ReimaginedVariants.MOD_ID, "pale_oak_biomes"));
 
     public ModBiomeTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, RegistryKeys.BIOME, registriesFuture, null);

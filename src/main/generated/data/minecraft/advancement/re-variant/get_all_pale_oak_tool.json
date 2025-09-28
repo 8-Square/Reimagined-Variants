@@ -1,0 +1,64 @@
+{
+  "parent": "minecraft:re-variant/get_pale_oak_tool",
+  "criteria": {
+    "got_all_pale_oak_tool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "re-variant:pale_oak_sword"
+          },
+          {
+            "items": "re-variant:pale_oak_pickaxe"
+          },
+          {
+            "items": "re-variant:pale_oak_axe"
+          },
+          {
+            "items": "re-variant:pale_oak_shovel"
+          },
+          {
+            "items": "re-variant:pale_oak_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_pale_oak_biome": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "#re-variant:pale_oak_biomes"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": "Either you're really lucky or you used creative",
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "re-variant:pale_oak_pickaxe"
+    },
+    "title": "Pale & Stale"
+  },
+  "requirements": [
+    [
+      "got_all_pale_oak_tool"
+    ],
+    [
+      "got_pale_oak_biome"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

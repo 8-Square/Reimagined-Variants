@@ -446,6 +446,49 @@ public class ModItems {
                     0.0f,
                     -3.0f
             ));
+
+
+    // PALE OAK TOOLS ////////////////////////////////////////////////////////
+    public static final Item PALE_OAK_SWORD = register(
+            "pale_oak_sword",
+            Item::new,
+            new Item.Settings().sword(
+                    ModToolMaterial.PALE_OAK_TOOL_MATERIAL,
+                    3.0f,
+                    -2.4f
+            ));
+    public static final Item PALE_OAK_PICKAXE = register(
+            "pale_oak_pickaxe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.PALE_OAK_TOOL_MATERIAL,
+                    1.0f,
+                    -2.8f
+            ));
+    public static final Item PALE_OAK_AXE = register(
+            "pale_oak_axe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.PALE_OAK_TOOL_MATERIAL,
+                    6.0f,
+                    -3.2f
+            ));
+    public static final Item PALE_OAK_SHOVEL = register(
+            "pale_oak_shovel",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.PALE_OAK_TOOL_MATERIAL,
+                    1.5f,
+                    -3.0f
+            ));
+    public static final Item PALE_OAK_HOE = register(
+            "pale_oak_hoe",
+            Item::new,
+            new Item.Settings().shovel(
+                    ModToolMaterial.PALE_OAK_TOOL_MATERIAL,
+                    0.0f,
+                    -3.0f
+            ));
     // STONE TYPES
 
     // COBBLESTONE PICKAXE
@@ -523,6 +566,12 @@ public class ModItems {
             itemGroup.add(ModItems.DARK_OAK_AXE);
             itemGroup.add(ModItems.DARK_OAK_SHOVEL);
             itemGroup.add(ModItems.DARK_OAK_HOE);
+
+            itemGroup.add(ModItems.PALE_OAK_SWORD);
+            itemGroup.add(ModItems.PALE_OAK_PICKAXE);
+            itemGroup.add(ModItems.PALE_OAK_AXE);
+            itemGroup.add(ModItems.PALE_OAK_SHOVEL);
+            itemGroup.add(ModItems.PALE_OAK_HOE);
         });
     }
 }
